@@ -1,8 +1,9 @@
 import React from "react";
 import type { Metadata, Viewport } from "next";
 import { Barlow, Barlow_Condensed, IBM_Plex_Mono } from "next/font/google";
+import { JsonLd } from "@/components/site/json-ld";
 import { company } from "@/lib/company";
-import { organizationSchema } from "@/lib/seo";
+import { buildPageUrl, DEFAULT_OG_IMAGE, organizationSchema, websiteSchema } from "@/lib/seo";
 import "./globals.css";
 
 const barlow = Barlow({
@@ -24,8 +25,14 @@ const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-ibm-plex-mono",
 });
 
+const defaultTitle = `${company.brandName} — IT & Software Development Company in India`;
+
 export const metadata: Metadata = {
-  title: `${company.brandName} — IT & Software Development Company in India`,
+  metadataBase: new URL(buildPageUrl()),
+  title: {
+    default: defaultTitle,
+    template: `%s | ${company.brandName}`,
+  },
   description: company.description,
   keywords: [
     company.brandName,
@@ -35,14 +42,38 @@ export const metadata: Metadata = {
     "mobile app development",
     "IT services",
   ],
-  metadataBase: new URL(`https://${company.domain}`),
+  alternates: {
+    canonical: buildPageUrl("/"),
+  },
   openGraph: {
-    title: `${company.brandName} — IT & Software Development`,
+    title: defaultTitle,
     description: company.description,
-    url: `https://${company.domain}`,
+    url: buildPageUrl("/"),
     siteName: company.brandName,
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 512,
+        height: 512,
+        alt: `${company.brandName} — Software Development in India`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: defaultTitle,
+    description: company.description,
+    images: [DEFAULT_OG_IMAGE],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
   },
 };
 
@@ -56,14 +87,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <body
         className={`${barlow.variable} ${barlowCondensed.variable} ${ibmPlexMono.variable} font-sans antialiased`}
       >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
-        />
+        <JsonLd data={[organizationSchema(), websiteSchema()]} />
         {children}
       </body>
     </html>

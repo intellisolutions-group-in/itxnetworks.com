@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { siteMetrics } from "@/lib/site-metrics";
 
 function DotWaveCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -75,7 +76,11 @@ export function CtaSection() {
   }, []);
 
   return (
-    <section className="relative border-t border-[#1e1e1e]">
+    <section
+      id="cta"
+      className="relative border-t border-[#1e1e1e]"
+      aria-labelledby="cta-heading"
+    >
       <div
         ref={ref}
         className={`max-w-[1400px] mx-auto px-6 lg:px-12 transition-all duration-700 ${vis ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
@@ -105,7 +110,10 @@ export function CtaSection() {
             </div>
 
             {/* Headline */}
-            <h2 className="font-display text-[clamp(3.5rem,12vw,10rem)] leading-[0.88] tracking-tight text-[#f2ede6] uppercase mb-4">
+            <h2
+              id="cta-heading"
+              className="font-display text-[clamp(3.5rem,12vw,10rem)] leading-[0.88] tracking-tight text-[#f2ede6] uppercase mb-4"
+            >
               YOUR NEXT<br />
               <span className="text-[#2196f3]">SOFTWARE</span><br />
               PROJECT STARTS HERE.
@@ -136,10 +144,10 @@ export function CtaSection() {
             {/* Social proof row */}
             <div className="flex items-center justify-center gap-8 mt-10 flex-wrap">
               {[
-                { v: "2002", l: "established" },
-                { v: "18+", l: "service areas" },
-                { v: "30+", l: "site pages" },
-                { v: "INDIA", l: "market focus" },
+                { v: String(siteMetrics.establishedYear), l: "established" },
+                { v: `${siteMetrics.domainAgeYears}+`, l: "years active" },
+                { v: `${siteMetrics.serviceAreaCount}+`, l: "service areas" },
+                { v: `${siteMetrics.sitePageCount}+`, l: "site pages" },
               ].map(s => (
                 <div key={s.l} className="text-center">
                   <div className="font-display text-2xl text-[#2196f3]">{s.v}</div>

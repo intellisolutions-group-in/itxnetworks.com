@@ -8,10 +8,12 @@ type PageLayoutProps = {
 
 export function PageLayout({ children }: PageLayoutProps) {
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-[#050505]">
+    <>
       <Navigation />
-      {children}
+      <main id="main-content" className="relative min-h-screen overflow-x-hidden bg-[#050505]">
+        {children}
+      </main>
       <FooterSection />
-    </main>
+    </>
   );
 }

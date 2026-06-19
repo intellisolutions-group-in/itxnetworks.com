@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { formatEstablishedYear } from "@/lib/company";
 import { AgentParticleCanvas } from "./agent-particle-canvas";
 
 const VERBS = ["DESIGN", "BUILD", "DEPLOY", "SCALE", "SUPPORT"];
@@ -21,7 +22,7 @@ export function HeroSection() {
 
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden grid-bg pt-[88px]">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden grid-bg pt-[88px]" aria-labelledby="hero-heading">
       {/* Particle canvas — right half of hero, full height, behind content */}
       <div className="absolute inset-y-0 right-0 w-full lg:w-[55%] pointer-events-none z-0">
         <AgentParticleCanvas className="w-full h-full" />
@@ -52,24 +53,28 @@ export function HeroSection() {
                 </p>
               </div>
 
-              {/* Big headline */}
-              <h1 className="font-display text-[clamp(4rem,14vw,12rem)] leading-[0.88] tracking-tight text-[#f2ede6] uppercase">
-                SOFTWARE WE
-              </h1>
-
-              {/* Animated verb */}
-              <div className="relative overflow-hidden h-[clamp(4rem,14vw,12rem)] leading-[0.88]">
-                <h1
-                  key={verbIdx}
-                  className="font-display text-[clamp(4rem,14vw,12rem)] leading-[0.88] tracking-tight text-[#2196f3] uppercase absolute inset-0"
-                  style={{ animation: "fade-up 0.1s ease forwards" }}
+              <h1
+                id="hero-heading"
+                className="font-display text-[clamp(4rem,14vw,12rem)] leading-[0.88] tracking-tight uppercase"
+              >
+                <span className="block text-[#f2ede6]">SOFTWARE WE</span>
+                <span
+                  className="relative block overflow-hidden h-[clamp(4rem,14vw,12rem)] leading-[0.88] text-[#2196f3]"
+                  aria-live="polite"
                 >
-                  {VERBS[verbIdx]}
-                </h1>
-              </div>
-
-              <h1 className="font-display text-[clamp(4rem,14vw,12rem)] leading-[0.88] tracking-tight uppercase text-[#f2ede6]">
-                DELIVER
+                  <span
+                    key={verbIdx}
+                    className="absolute inset-0"
+                    style={{ animation: "fade-up 0.1s ease forwards" }}
+                  >
+                    {VERBS[verbIdx]}
+                  </span>
+                </span>
+                <span className="block text-[#f2ede6]">DELIVER</span>
+                <span className="sr-only">
+                  IT and software development company in India — custom web, mobile, cloud, and
+                  enterprise solutions
+                </span>
               </h1>
             </div>
 
@@ -107,7 +112,7 @@ export function HeroSection() {
                   ))}
                 </div>
                 <span className="font-mono text-[10px] text-[#3a3a3a]">
-                  Trusted software partner since 2002
+                  Trusted software partner since {formatEstablishedYear()}
                 </span>
               </div>
             </div>

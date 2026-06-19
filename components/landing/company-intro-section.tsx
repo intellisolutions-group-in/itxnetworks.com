@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { company, formatEstablishedYear } from "@/lib/company";
+import { siteMetrics } from "@/lib/site-metrics";
 
 export function CompanyIntroSection() {
   const [vis, setVis] = useState(false);
@@ -20,7 +21,12 @@ export function CompanyIntroSection() {
   }, []);
 
   return (
-    <section id="about-preview" ref={ref} className="relative border-t border-[#1e1e1e] scroll-mt-[88px]">
+    <section
+      id="about-preview"
+      ref={ref}
+      className="relative border-t border-[#1e1e1e] scroll-mt-[88px]"
+      aria-labelledby="company-intro-heading"
+    >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div
           className={`border-b border-[#1e1e1e] py-8 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 transition-all duration-500 ${
@@ -29,7 +35,10 @@ export function CompanyIntroSection() {
         >
           <div>
             <span className="sys-tag mb-3 block">COMPANY</span>
-            <h2 className="font-display text-6xl lg:text-8xl leading-[0.88] tracking-tight text-[#f2ede6]">
+            <h2
+              id="company-intro-heading"
+              className="font-display text-6xl lg:text-8xl leading-[0.88] tracking-tight text-[#f2ede6]"
+            >
               ENGINEERING<br />
               <span style={{ WebkitTextStroke: "1px #3a3a3a", color: "transparent" }}>
                 PARTNER
@@ -58,10 +67,10 @@ export function CompanyIntroSection() {
           </div>
           <div className="grid grid-cols-2">
             {[
-              { v: String(company.establishedYear), l: "established" },
-              { v: "18", l: "service areas" },
-              { v: "India", l: "delivery focus" },
-              { v: "Remote", l: "collaboration" },
+              { v: String(siteMetrics.establishedYear), l: "established" },
+              { v: `${siteMetrics.domainAgeYears}+`, l: "years active" },
+              { v: String(siteMetrics.serviceAreaCount), l: "service areas" },
+              { v: company.targetCountry, l: "delivery focus" },
             ].map((item) => (
               <div
                 key={item.l}

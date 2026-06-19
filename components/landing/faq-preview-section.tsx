@@ -23,7 +23,12 @@ export function FaqPreviewSection() {
   }, []);
 
   return (
-    <section id="faq-preview" ref={ref} className="relative border-t border-[#1e1e1e] scroll-mt-[88px]">
+    <section
+      id="faq-preview"
+      ref={ref}
+      className="relative border-t border-[#1e1e1e] scroll-mt-[88px]"
+      aria-labelledby="faq-preview-heading"
+    >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-16 lg:py-20">
         <div
           className={`border-b border-[#1e1e1e] pb-8 mb-10 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 transition-all duration-500 ${
@@ -32,7 +37,10 @@ export function FaqPreviewSection() {
         >
           <div>
             <span className="sys-tag mb-3 block">FAQ</span>
-            <h2 className="font-display text-6xl lg:text-7xl leading-[0.88] tracking-tight text-[#f2ede6] uppercase">
+            <h2
+              id="faq-preview-heading"
+              className="font-display text-6xl lg:text-7xl leading-[0.88] tracking-tight text-[#f2ede6] uppercase"
+            >
               Common Questions
             </h2>
           </div>

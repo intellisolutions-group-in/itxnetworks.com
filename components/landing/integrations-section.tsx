@@ -4,29 +4,29 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const ROW1 = [
-  { name: "React", cat: "FRONTEND" },
-  { name: "Next.js", cat: "WEB" },
-  { name: "Node.js", cat: "BACKEND" },
-  { name: ".NET", cat: "ENTERPRISE" },
-  { name: "Java", cat: "BACKEND" },
-  { name: "Python", cat: "DATA/API" },
-  { name: "PostgreSQL", cat: "DATABASE" },
-  { name: "MongoDB", cat: "DATABASE" },
-  { name: "AWS", cat: "CLOUD" },
-  { name: "Azure", cat: "CLOUD" },
+  { name: "SPA Framework", cat: "FRONTEND" },
+  { name: "Web Framework", cat: "WEB" },
+  { name: "Server Runtime", cat: "BACKEND" },
+  { name: "Enterprise Framework", cat: "ENTERPRISE" },
+  { name: "JVM Platform", cat: "BACKEND" },
+  { name: "Scripting Language", cat: "DATA/API" },
+  { name: "Relational Database", cat: "DATABASE" },
+  { name: "Document Database", cat: "DATABASE" },
+  { name: "Public Cloud", cat: "CLOUD" },
+  { name: "Enterprise Cloud", cat: "CLOUD" },
 ];
 
 const ROW2 = [
-  { name: "Flutter", cat: "MOBILE" },
-  { name: "React Native", cat: "MOBILE" },
-  { name: "Docker", cat: "DEVOPS" },
-  { name: "Kubernetes", cat: "DEVOPS" },
-  { name: "Redis", cat: "CACHE" },
-  { name: "GraphQL", cat: "API" },
-  { name: "TypeScript", cat: "LANGUAGE" },
-  { name: "Tailwind", cat: "UI" },
-  { name: "GitHub", cat: "DELIVERY" },
-  { name: "Figma", cat: "DESIGN" },
+  { name: "Mobile SDK", cat: "MOBILE" },
+  { name: "Cross-Platform Mobile", cat: "MOBILE" },
+  { name: "Containers", cat: "DEVOPS" },
+  { name: "Orchestration", cat: "DEVOPS" },
+  { name: "In-Memory Cache", cat: "CACHE" },
+  { name: "API Query Language", cat: "API" },
+  { name: "Typed Language", cat: "LANGUAGE" },
+  { name: "Utility CSS", cat: "UI" },
+  { name: "Source Control", cat: "DELIVERY" },
+  { name: "Design Tools", cat: "DESIGN" },
 ];
 
 function IntChip({ name, cat }: { name: string; cat: string }) {
@@ -56,7 +56,11 @@ export function IntegrationsSection() {
   }, []);
 
   return (
-    <section id="integrations" className="relative border-t border-[#1e1e1e] scroll-mt-[88px]">
+    <section
+      id="integrations"
+      className="relative border-t border-[#1e1e1e] scroll-mt-[88px]"
+      aria-labelledby="integrations-heading"
+    >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div
           ref={ref}
@@ -66,7 +70,10 @@ export function IntegrationsSection() {
         >
           <div>
             <span className="sys-tag mb-3 block">TECHNOLOGY STACK</span>
-            <h2 className="font-display text-6xl lg:text-8xl leading-[0.88] tracking-tight text-[#f2ede6]">
+            <h2
+              id="integrations-heading"
+              className="font-display text-6xl lg:text-8xl leading-[0.88] tracking-tight text-[#f2ede6]"
+            >
               MODERN<br />
               <span style={{ WebkitTextStroke: "1px #3a3a3a", color: "transparent" }}>
                 PLATFORMS.

@@ -62,7 +62,7 @@ export function Navigation() {
         <div className="px-6 lg:px-12 h-14 flex items-center justify-between">
           <SiteLogo showTagline />
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8" aria-label="Primary navigation">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -105,7 +105,7 @@ export function Navigation() {
         }`}
         style={{ paddingTop: "88px" }}
       >
-        <div className="border-t border-[#1e1e1e] flex flex-col">
+        <div className="border-t border-[#1e1e1e] flex flex-col" role="navigation" aria-label="Mobile navigation">
           {navLinks.map((link, i) => (
             <Link
               key={link.name}

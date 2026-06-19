@@ -5,7 +5,7 @@
     "type": "Enterprise Web Application",
     "challenge": "A multi-branch services company relied on spreadsheets and disconnected tools to manage work orders, approvals, and reporting.",
     "solution": "We designed a centralised web portal with role-based workflows, audit trails, and real-time dashboards tailored to operational teams.",
-    "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "AWS"],
+    "technologies": ["Component Frontend", "Server Runtime", "Relational Database", "In-Memory Cache", "Public Cloud"],
     "outcome": "Manual coordination time reduced significantly and leadership gained consistent visibility across regions."
   },
   {
@@ -13,8 +13,8 @@
     "title": "Field Service Mobile Suite",
     "type": "Cross-Platform Mobile App",
     "challenge": "Technicians needed offline access to job details, checklists, and photo capture while working in low-connectivity areas.",
-    "solution": "A cross-platform mobile application with offline sync, GPS check-ins, and structured service reports integrated with the core ERP.",
-    "technologies": ["React Native", "GraphQL", "SQLite", "Firebase"],
+    "solution": "A cross-platform mobile application with offline sync, GPS check-ins, and structured service reports integrated with the core business system.",
+    "technologies": ["Cross-Platform Mobile", "API Layer", "Embedded Database", "Mobile Backend"],
     "outcome": "Field teams completed jobs faster with fewer data entry errors and improved first-time resolution rates."
   },
   {
@@ -23,7 +23,7 @@
     "type": "Custom Software",
     "challenge": "A distribution business struggled with stock discrepancies, delayed replenishment, and limited forecasting visibility.",
     "solution": "Custom inventory software with barcode scanning, automated reorder rules, and analytics for demand patterns by category.",
-    "technologies": [".NET", "SQL Server", "Power BI", "Azure"],
+    "technologies": ["Enterprise Framework", "Relational Database", "Business Analytics", "Enterprise Cloud"],
     "outcome": "Stock accuracy improved and procurement cycles became more predictable across warehouses."
   },
   {
@@ -31,17 +31,17 @@
     "title": "Customer Self-Service Hub",
     "type": "Progressive Web App",
     "challenge": "Support volume was high because customers could not track requests, invoices, or service history independently.",
-    "solution": "A progressive web app with secure login, ticket tracking, document downloads, and notification preferences.",
-    "technologies": ["Next.js", "Tailwind CSS", "REST APIs", "CloudFront"],
+    "solution": "A progressive web app with secure login, ticket tracking, document access, and notification preferences.",
+    "technologies": ["Modern Web Framework", "Utility CSS", "REST APIs", "CDN"],
     "outcome": "Support enquiries decreased while customer satisfaction scores improved after self-service launch."
   },
   {
     "id": "p5",
-    "title": "Legacy ERP Modernisation",
+    "title": "Legacy Business System Modernisation",
     "type": "Software Modernization",
-    "challenge": "An ageing desktop ERP could not scale, lacked API access, and blocked integration with newer SaaS tools.",
+    "challenge": "An ageing desktop system could not scale, lacked API access, and blocked integration with newer online tools.",
     "solution": "Phased modernisation with a service-oriented architecture, cloud-hosted modules, and a migration plan for historical data.",
-    "technologies": ["Java", "Spring Boot", "PostgreSQL", "Kubernetes"],
+    "technologies": ["JVM Platform", "Java Framework", "Relational Database", "Orchestration"],
     "outcome": "Critical modules moved to the cloud with minimal disruption and a clear roadmap for remaining components."
   },
   {
@@ -50,7 +50,7 @@
     "type": "E-commerce Development",
     "challenge": "Wholesale buyers needed tiered pricing, bulk ordering, and approval flows not supported by a generic storefront.",
     "solution": "A B2B commerce platform with account hierarchies, contract pricing, and integration to accounting and logistics systems.",
-    "technologies": ["Shopify Plus", "Node.js", "Stripe", "Webhooks"],
+    "technologies": ["Commerce Platform", "Server Runtime", "Payment Gateway", "Webhooks"],
     "outcome": "Order processing became faster and sales teams gained better insight into buyer behaviour and repeat patterns."
   },
   {
@@ -59,7 +59,7 @@
     "type": "Enterprise Application",
     "challenge": "A regulated business required controlled document versioning, approvals, and traceability for audits.",
     "solution": "An enterprise document management application with workflow automation, digital signatures, and granular permissions.",
-    "technologies": ["Angular", ".NET Core", "Azure Blob Storage", "Active Directory"],
+    "technologies": ["Component Frontend", "Enterprise Framework", "Object Storage", "Directory Services"],
     "outcome": "Audit preparation time reduced and document retrieval became reliable across departments."
   },
   {
@@ -68,7 +68,7 @@
     "type": "API Development",
     "challenge": "Multiple product teams needed consistent access to customer and usage data without duplicating integration logic.",
     "solution": "A central API layer with standardised endpoints, caching, rate limiting, and developer documentation.",
-    "technologies": ["FastAPI", "PostgreSQL", "Kafka", "OpenAPI"],
+    "technologies": ["Python Framework", "Relational Database", "Event Streaming", "API Specifications"],
     "outcome": "New integrations shipped faster and data inconsistencies across internal tools decreased materially."
   }
 ]

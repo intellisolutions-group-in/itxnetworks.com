@@ -2,12 +2,16 @@ import { AnimatedSection } from "@/components/site/animated-section";
 import { PageLayout } from "@/components/site/page-layout";
 import { PageHero } from "@/components/site/page-hero";
 import { ContactForm } from "@/components/site/contact-form";
+import { PageSeo } from "@/components/site/page-seo";
 import { company } from "@/lib/company";
 import { createMetadata } from "@/lib/seo";
 
+const PAGE_TITLE = "Contact Us";
+const PAGE_DESCRIPTION = `Contact ${company.brandName} for software development enquiries, project discussions, and partnership opportunities.`;
+
 export const metadata = createMetadata({
-  title: "Contact Us",
-  description: `Contact ${company.brandName} for software development enquiries, project discussions, and partnership opportunities.`,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: ["contact ITX Networks", "software development enquiry", "IT consulting India"],
   path: "/contact/",
 });
@@ -15,6 +19,15 @@ export const metadata = createMetadata({
 export default function ContactPage() {
   return (
     <PageLayout>
+      <PageSeo
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/contact/"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: PAGE_TITLE, path: "/contact/" },
+        ]}
+      />
       <PageHero
         tag="CONTACT"
         title="Let's Discuss Your Software Requirements"
@@ -81,7 +94,7 @@ export default function ContactPage() {
           </h2>
           <p className="mt-4 text-sm text-[#5a5a5a] leading-relaxed max-w-2xl">
             Office location map will be added once address details are confirmed. We currently
-            support remote collaboration with clients across India and international markets.
+            support remote collaboration with clients across India.
           </p>
           <div className="mt-8 border border-[#1e1e1e] h-64 flex items-center justify-center">
             <span className="font-mono text-[11px] tracking-widest text-[#3a3a3a]">

@@ -17,7 +17,10 @@ export function PageHero({ tag, title, description, children }: PageHeroProps) {
   }, []);
 
   return (
-    <section className="relative border-b border-[#1e1e1e] grid-bg pt-[88px] overflow-hidden">
+    <section
+      className="relative border-b border-[#1e1e1e] grid-bg pt-[88px] overflow-hidden"
+      aria-labelledby="page-hero-title"
+    >
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -34,6 +37,7 @@ export function PageHero({ tag, title, description, children }: PageHeroProps) {
           — {tag}
         </p>
         <h1
+          id="page-hero-title"
           className={`font-display text-[clamp(2.5rem,8vw,6rem)] leading-[0.9] tracking-tight text-[#f2ede6] uppercase max-w-5xl transition-all duration-700 delay-100 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}

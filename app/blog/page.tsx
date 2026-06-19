@@ -3,13 +3,17 @@ import { AnimatedSection, Stagger } from "@/components/site/animated-section";
 import { PageLayout } from "@/components/site/page-layout";
 import { PageHero } from "@/components/site/page-hero";
 import { SiteCta } from "@/components/site/site-cta";
+import { PageSeo } from "@/components/site/page-seo";
 import { blogPosts, formatBlogDate } from "@/lib/blog";
 import { company } from "@/lib/company";
-import { createMetadata } from "@/lib/seo";
+import { buildPageUrl, createMetadata, itemListSchema } from "@/lib/seo";
+
+const PAGE_TITLE = "Blog";
+const PAGE_DESCRIPTION = `Insights on software development, delivery, cloud, mobile, and quality engineering from ${company.brandName}.`;
 
 export const metadata = createMetadata({
-  title: "Blog",
-  description: `Insights on software development, delivery, cloud, mobile, and quality engineering from ${company.brandName}.`,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: ["software development blog", "IT insights India", "technology articles"],
   path: "/blog/",
 });
@@ -17,6 +21,25 @@ export const metadata = createMetadata({
 export default function BlogPage() {
   return (
     <PageLayout>
+      <PageSeo
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/blog/"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: PAGE_TITLE, path: "/blog/" },
+        ]}
+        schemas={[
+          itemListSchema(
+            "Software Development Blog",
+            blogPosts.map((post) => ({
+              name: post.title,
+              url: buildPageUrl(`/blog/${post.slug}/`),
+              description: post.excerpt,
+            }))
+          ),
+        ]}
+      />
       <PageHero
         tag="BLOG"
         title="Insights On Software Delivery And Technology"

@@ -2,12 +2,16 @@ import { PageLayout } from "@/components/site/page-layout";
 import { PageHero } from "@/components/site/page-hero";
 import { AnimatedSection, Stagger } from "@/components/site/animated-section";
 import { SiteCta } from "@/components/site/site-cta";
+import { PageSeo } from "@/components/site/page-seo";
 import { company, formatEstablishedYear } from "@/lib/company";
 import { createMetadata } from "@/lib/seo";
 
+const PAGE_TITLE = "About Us";
+const PAGE_DESCRIPTION = `Learn about ${company.brandName}, an India-focused IT and software development company established in ${company.establishedYear}.`;
+
 export const metadata = createMetadata({
-  title: "About Us",
-  description: `Learn about ${company.brandName}, an India-focused IT and software development company established in ${company.establishedYear}.`,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: ["about ITX Networks", "software company India", "IT services"],
   path: "/about/",
 });
@@ -38,6 +42,15 @@ const values = [
 export default function AboutPage() {
   return (
     <PageLayout>
+      <PageSeo
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/about/"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: PAGE_TITLE, path: "/about/" },
+        ]}
+      />
       <PageHero
         tag="ABOUT_US"
         title="Building Software That Powers Modern Business"
@@ -53,8 +66,7 @@ export default function AboutPage() {
             </h2>
             <p className="mt-6 text-sm text-[#5a5a5a] leading-relaxed">
               Since {formatEstablishedYear()}, we have supported organisations that need dependable
-              engineering capacity and strategic guidance across {company.targetCountry} and
-              international markets.
+              engineering capacity and strategic guidance across {company.targetCountry}.
             </p>
             <p className="mt-4 text-sm text-[#5a5a5a] leading-relaxed">
               From web and mobile applications to enterprise platforms, APIs, and modernisation
@@ -88,7 +100,7 @@ export default function AboutPage() {
             {[
               {
                 tag: "MISSION",
-                text: "To deliver robust, maintainable software that helps Indian and global businesses operate more efficiently, serve customers better, and adapt confidently to change.",
+                text: "To deliver robust, maintainable software that helps Indian businesses operate more efficiently, serve customers better, and adapt confidently to change.",
               },
               {
                 tag: "VISION",

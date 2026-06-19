@@ -3,12 +3,16 @@ import { AnimatedSection, Stagger } from "@/components/site/animated-section";
 import { PageLayout } from "@/components/site/page-layout";
 import { PageHero } from "@/components/site/page-hero";
 import { SiteCta } from "@/components/site/site-cta";
+import { PageSeo } from "@/components/site/page-seo";
 import { company } from "@/lib/company";
 import { createMetadata } from "@/lib/seo";
 
+const PAGE_TITLE = "Portfolio";
+const PAGE_DESCRIPTION = `View case studies and project examples delivered by ${company.brandName} across web, mobile, enterprise, and integration programmes.`;
+
 export const metadata = createMetadata({
-  title: "Portfolio",
-  description: `View case studies and project examples delivered by ${company.brandName} across web, mobile, enterprise, and integration programmes.`,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: ["software portfolio", "case studies", "project examples"],
   path: "/portfolio/",
 });
@@ -16,6 +20,15 @@ export const metadata = createMetadata({
 export default function PortfolioPage() {
   return (
     <PageLayout>
+      <PageSeo
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/portfolio/"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: PAGE_TITLE, path: "/portfolio/" },
+        ]}
+      />
       <PageHero
         tag="PORTFOLIO"
         title="Case Studies And Project Examples"

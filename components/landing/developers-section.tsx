@@ -7,9 +7,9 @@ import { Copy, Check } from "lucide-react";
 const TABS = [
   {
     label: "SCaffold",
-    code: `npx create-next-app@latest client-portal
+    code: `npx create-app@latest client-portal
 cd client-portal
-npm install zod react-hook-form
+npm install validation library form library
 
 # Project structure
 /src
@@ -38,7 +38,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - checkout source
       - run: npm ci
       - run: npm run test
       - run: npm run build
@@ -48,7 +48,7 @@ jobs:
   },
   {
     label: "TEST",
-    code: `import { test, expect } from '@playwright/test'
+    code: `import { test, expect } from 'testing-framework'
 
 test('checkout flow completes', async ({ page }) => {
   await page.goto('/checkout')
@@ -60,8 +60,8 @@ test('checkout flow completes', async ({ page }) => {
 ];
 
 const STACK_PROPS = [
-  { k: "Modern frameworks", v: "React, Next.js, Node.js, .NET, Java, and Python." },
-  { k: "Cloud-native delivery", v: "AWS, Azure, GCP, Docker, and Kubernetes." },
+  { k: "Modern frameworks", v: "Web frameworks, server runtimes, enterprise platforms, and scripting languages." },
+  { k: "Cloud-native delivery", v: "Public cloud, private cloud, containers, and orchestration." },
   { k: "Quality built-in", v: "Automated tests, code review, and staged releases." },
   { k: "Maintainable code", v: "Documentation, modular architecture, and handover support." },
 ];
@@ -90,7 +90,12 @@ export function DevelopersSection() {
   };
 
   return (
-    <section id="developers" ref={ref} className="relative border-t border-[#1e1e1e] scroll-mt-[88px]">
+    <section
+      id="developers"
+      ref={ref}
+      className="relative border-t border-[#1e1e1e] scroll-mt-[88px]"
+      aria-labelledby="developers-heading"
+    >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div
           className={`border-b border-[#1e1e1e] py-8 transition-all duration-500 ${
@@ -98,7 +103,10 @@ export function DevelopersSection() {
           }`}
         >
           <span className="sys-tag mb-3 block">ENGINEERING APPROACH</span>
-          <h2 className="font-display text-6xl lg:text-8xl leading-[0.88] tracking-tight text-[#f2ede6]">
+          <h2
+            id="developers-heading"
+            className="font-display text-6xl lg:text-8xl leading-[0.88] tracking-tight text-[#f2ede6]"
+          >
             BUILT FOR<br />
             <span style={{ WebkitTextStroke: "1px #3a3a3a", color: "transparent" }}>
               PRODUCTION

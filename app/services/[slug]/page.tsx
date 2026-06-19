@@ -6,6 +6,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { ContactForm } from "@/components/site/contact-form";
 import { ServiceCard } from "@/components/site/service-card";
 import { SiteCta } from "@/components/site/site-cta";
+import { PageSeo } from "@/components/site/page-seo";
 import { company } from "@/lib/company";
 import { createMetadata, serviceSchema } from "@/lib/seo";
 import { getRelatedServices, getServiceWithDetail, services } from "@/lib/services";
@@ -45,9 +46,16 @@ export default async function ServiceDetailPage({ params }: Props) {
 
   return (
     <PageLayout>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      <PageSeo
+        title={service.title}
+        description={service.shortDescription}
+        path={`/services/${service.slug}/`}
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services/" },
+          { name: service.title, path: `/services/${service.slug}/` },
+        ]}
+        schemas={[schema]}
       />
       <PageHero
         tag={service.category.toUpperCase()}

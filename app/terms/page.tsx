@@ -1,12 +1,16 @@
 import { AnimatedSection } from "@/components/site/animated-section";
 import { PageLayout } from "@/components/site/page-layout";
 import { PageHero } from "@/components/site/page-hero";
+import { PageSeo } from "@/components/site/page-seo";
 import { company } from "@/lib/company";
 import { createMetadata } from "@/lib/seo";
 
+const PAGE_TITLE = "Terms of Service";
+const PAGE_DESCRIPTION = `Terms of service governing use of the ${company.brandName} website and related digital services.`;
+
 export const metadata = createMetadata({
-  title: "Terms of Service",
-  description: `Terms of service governing use of the ${company.brandName} website and related digital services.`,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: ["terms of service", "website terms"],
   path: "/terms/",
 });
@@ -14,6 +18,15 @@ export const metadata = createMetadata({
 export default function TermsPage() {
   return (
     <PageLayout>
+      <PageSeo
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/terms/"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: PAGE_TITLE, path: "/terms/" },
+        ]}
+      />
       <PageHero
         tag="LEGAL"
         title="Terms of Service"

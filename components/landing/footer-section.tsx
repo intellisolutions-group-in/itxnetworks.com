@@ -49,7 +49,7 @@ export function FooterSection() {
   }, []);
 
   return (
-    <footer className="relative border-t border-[#1e1e1e]">
+    <footer className="relative border-t border-[#1e1e1e]" aria-label="Site footer">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="border-b border-[#1e1e1e] py-12 grid lg:grid-cols-[1fr_2fr] gap-10">
           <div>
