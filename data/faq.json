@@ -1,0 +1,103 @@
+[
+  {
+    "category": "General",
+    "items": [
+      {
+        "question": "What types of software projects does ITX Networks handle?",
+        "answer": "We deliver web applications, mobile apps, desktop software, enterprise systems, APIs, cloud-native platforms, and modernisation programmes for businesses across India and international markets."
+      },
+      {
+        "question": "Which industries do you typically work with?",
+        "answer": "Our work spans logistics, healthcare, manufacturing, retail, education, financial services, and professional services. We focus on understanding domain workflows before recommending technical solutions."
+      },
+      {
+        "question": "Do you work with startups as well as established enterprises?",
+        "answer": "Yes. We support early-stage product builds, growth-stage scaling, and enterprise-grade programmes with compliance, integration, and long-term maintenance requirements."
+      },
+      {
+        "question": "Where is your team based?",
+        "answer": "ITX Networks operates with a India-focused delivery model and supports remote collaboration with clients globally. Office location details will be published when available."
+      }
+    ]
+  },
+  {
+    "category": "Process",
+    "items": [
+      {
+        "question": "How do you start a new project?",
+        "answer": "We begin with discovery workshops to understand goals, users, constraints, and success metrics. This leads to a scope outline, delivery plan, and technical approach before development begins."
+      },
+      {
+        "question": "Which development methodology do you follow?",
+        "answer": "We typically use agile delivery with two-week sprints, regular demos, backlog refinement, and transparent reporting. Methodology is adapted to match your internal processes where needed."
+      },
+      {
+        "question": "Can you join an existing product team?",
+        "answer": "Yes. We frequently augment in-house teams with engineers, QA specialists, designers, and architects while aligning with your existing tools, ceremonies, and coding standards."
+      },
+      {
+        "question": "How do you manage project communication?",
+        "answer": "We assign a dedicated point of contact, share weekly status updates, maintain a visible backlog, and document decisions so stakeholders always know progress, risks, and next steps."
+      }
+    ]
+  },
+  {
+    "category": "Technical",
+    "items": [
+      {
+        "question": "Which technologies do you use?",
+        "answer": "Our stack includes React, Next.js, Node.js, .NET, Java, Python, React Native, Flutter, PostgreSQL, MongoDB, Redis, AWS, Azure, and GCP depending on project requirements."
+      },
+      {
+        "question": "Do you provide cloud architecture and DevOps support?",
+        "answer": "Yes. We design cloud infrastructure, CI/CD pipelines, monitoring, and security controls as part of delivery or as a standalone engagement for existing applications."
+      },
+      {
+        "question": "Can you integrate with third-party systems?",
+        "answer": "Integration is a core capability. We connect CRMs, ERPs, payment gateways, identity providers, analytics tools, and custom APIs using secure, well-documented interfaces."
+      },
+      {
+        "question": "Do you offer automated testing?",
+        "answer": "We provide manual and automated QA including unit, integration, end-to-end, and regression testing to improve release confidence and reduce production defects."
+      }
+    ]
+  },
+  {
+    "category": "Engagement",
+    "items": [
+      {
+        "question": "What engagement models do you offer?",
+        "answer": "We offer fixed-scope projects, dedicated team extensions, and advisory consulting. The model is selected based on clarity of requirements, timeline, and internal capacity."
+      },
+      {
+        "question": "How is pricing structured?",
+        "answer": "Pricing depends on scope, team composition, timeline, and support expectations. After discovery, we provide a transparent proposal with milestones and deliverables."
+      },
+      {
+        "question": "Do you sign NDAs and handle confidential data securely?",
+        "answer": "Yes. We routinely work under NDAs and follow secure access practices, least-privilege permissions, and environment separation for sensitive client information."
+      },
+      {
+        "question": "What happens after the product goes live?",
+        "answer": "We offer maintenance and support plans covering monitoring, bug fixes, enhancements, security updates, and SLA-backed response times tailored to your operational needs."
+      }
+    ]
+  },
+  {
+    "category": "Support",
+    "items": [
+      {
+        "question": "Do you provide post-launch support?",
+        "answer": "Yes. Our maintenance services include incident response, performance tuning, feature enhancements, and proactive health checks for production systems."
+      },
+      {
+        "question": "Can you modernise legacy applications?",
+        "answer": "We specialise in phased modernisation, including UI refreshes, API extraction, database migration, cloud rehosting, and full rebuilds when business risk allows."
+      },
+      {
+        "question": "Will we own the source code and intellectual property?",
+        "answer": "For custom development engagements, clients typically receive ownership of deliverables as defined in the contract. Specific IP terms are agreed during the proposal stage."
+      }
+    ]
+  }
+]

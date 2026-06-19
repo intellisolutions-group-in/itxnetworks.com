@@ -1,0 +1,128 @@
+[
+  {
+    "slug": "web-development",
+    "title": "Web Development",
+    "category": "Engineering",
+    "shortDescription": "Custom web applications built with modern frameworks, scalable architecture, and performance-first delivery.",
+    "icon": "Globe"
+  },
+  {
+    "slug": "mobile-app-development",
+    "title": "Mobile App Development",
+    "category": "Engineering",
+    "shortDescription": "Native and hybrid mobile applications designed for reliability, usability, and long-term maintainability.",
+    "icon": "Smartphone"
+  },
+  {
+    "slug": "windows-application-development",
+    "title": "Windows Application Development",
+    "category": "Engineering",
+    "shortDescription": "Desktop software for Windows environments with secure deployment and enterprise integration support.",
+    "icon": "Monitor"
+  },
+  {
+    "slug": "custom-software-development",
+    "title": "Custom Software Development",
+    "category": "Engineering",
+    "shortDescription": "Tailor-made software solutions aligned with your business workflows, compliance needs, and growth plans.",
+    "icon": "Code2"
+  },
+  {
+    "slug": "progressive-web-apps",
+    "title": "Progressive Web Apps",
+    "category": "Engineering",
+    "shortDescription": "Fast, installable web experiences that combine reach, performance, and offline-ready capabilities.",
+    "icon": "Layers"
+  },
+  {
+    "slug": "cross-platform-development",
+    "title": "Cross-Platform App Development",
+    "category": "Engineering",
+    "shortDescription": "Unified codebases for iOS, Android, and web without compromising user experience or release velocity.",
+    "icon": "Share2"
+  },
+  {
+    "slug": "enterprise-applications",
+    "title": "Enterprise Application Development",
+    "category": "Enterprise",
+    "shortDescription": "Mission-critical enterprise systems with robust security, integration, and operational visibility.",
+    "icon": "Building2"
+  },
+  {
+    "slug": "desktop-applications",
+    "title": "Desktop Application Development",
+    "category": "Engineering",
+    "shortDescription": "Cross-platform and platform-specific desktop software for productivity, automation, and data processing.",
+    "icon": "Laptop"
+  },
+  {
+    "slug": "software-modernization",
+    "title": "Software Modernization",
+    "category": "Modernisation",
+    "shortDescription": "Legacy system upgrades, cloud migration, and architecture refactoring without disrupting operations.",
+    "icon": "RefreshCw"
+  },
+  {
+    "slug": "maintenance-support",
+    "title": "Application Maintenance & Support",
+    "category": "Support",
+    "shortDescription": "Proactive monitoring, bug fixes, enhancements, and SLA-backed support for production systems.",
+    "icon": "Wrench"
+  },
+  {
+    "slug": "ui-ux-design",
+    "title": "UI/UX Design Services",
+    "category": "Design",
+    "shortDescription": "Research-led interface design, design systems, and usability testing for digital products.",
+    "icon": "Palette"
+  },
+  {
+    "slug": "database-development",
+    "title": "Database Design & Development",
+    "category": "Data",
+    "shortDescription": "Schema design, optimisation, migration, and data layer engineering for high-volume applications.",
+    "icon": "Database"
+  },
+  {
+    "slug": "api-development",
+    "title": "API Development & Integration",
+    "category": "Integration",
+    "shortDescription": "RESTful and event-driven APIs with secure authentication, documentation, and third-party connectivity.",
+    "icon": "Plug"
+  },
+  {
+    "slug": "software-testing",
+    "title": "Software Testing & QA",
+    "category": "Quality",
+    "shortDescription": "Manual and automated testing strategies that reduce defects and improve release confidence.",
+    "icon": "ShieldCheck"
+  },
+  {
+    "slug": "cloud-applications",
+    "title": "Cloud Application Development",
+    "category": "Cloud",
+    "shortDescription": "Cloud-native applications on AWS, Azure, and GCP with scalable infrastructure and observability.",
+    "icon": "Cloud"
+  },
+  {
+    "slug": "ecommerce-development",
+    "title": "E-commerce Development",
+    "category": "Commerce",
+    "shortDescription": "Online storefronts, checkout flows, inventory systems, and integrations for digital commerce.",
+    "icon": "ShoppingCart"
+  },
+  {
+    "slug": "cms-development",
+    "title": "CMS Development",
+    "category": "Content",
+    "shortDescription": "Flexible content management platforms that empower teams to publish and manage content efficiently.",
+    "icon": "FileText"
+  },
+  {
+    "slug": "software-consulting",
+    "title": "Software Consulting",
+    "category": "Consulting",
+    "shortDescription": "Technical advisory on architecture, delivery strategy, team structure, and technology selection.",
+    "icon": "Lightbulb"
+  }
+]

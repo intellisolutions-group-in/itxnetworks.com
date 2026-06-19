@@ -1,0 +1,62 @@
+[
+  {
+    "id": "t1",
+    "name": "Rahul Mehta",
+    "designation": "Head of Operations, Logistics Firm",
+    "quote": "ITX Networks rebuilt our dispatch platform with clarity and discipline. Releases became predictable, and our internal teams finally trust the system they use every day."
+  },
+  {
+    "id": "t2",
+    "name": "Priya Sharma",
+    "designation": "Product Manager, Healthcare SaaS",
+    "quote": "Their team understood compliance constraints from day one. The architecture they proposed was practical, secure, and easy for our engineers to extend."
+  },
+  {
+    "id": "t3",
+    "name": "Arjun Patel",
+    "designation": "CTO, FinTech Startup",
+    "quote": "We needed speed without cutting corners. ITX Networks delivered a production-ready MVP and stayed involved through scaling pains with honest communication."
+  },
+  {
+    "id": "t4",
+    "name": "Neha Desai",
+    "designation": "Director, Retail Group",
+    "quote": "The e-commerce rollout was smooth. Performance improved across regions, and the admin tools they built reduced manual work for our operations team."
+  },
+  {
+    "id": "t5",
+    "name": "Vikram Singh",
+    "designation": "IT Manager, Manufacturing Company",
+    "quote": "Legacy modernisation is never easy. They phased the migration carefully, kept downtime minimal, and documented everything for our in-house team."
+  },
+  {
+    "id": "t6",
+    "name": "Ananya Iyer",
+    "designation": "Founder, EdTech Platform",
+    "quote": "Design and engineering worked as one unit. User feedback loops were built into sprints, and the final product feels polished on both web and mobile."
+  },
+  {
+    "id": "t7",
+    "name": "Karan Malhotra",
+    "designation": "Operations Lead, B2B Marketplace",
+    "quote": "Integration work with third-party APIs was handled professionally. Error handling, monitoring, and support documentation were all in place at launch."
+  },
+  {
+    "id": "t8",
+    "name": "Sneha Reddy",
+    "designation": "Programme Manager, Enterprise Client",
+    "quote": "What stood out was transparency. Weekly demos, clear risk flags, and no surprise scope changes. That level of accountability is rare."
+  },
+  {
+    "id": "t9",
+    "name": "Mohit Agarwal",
+    "designation": "Engineering Manager, SaaS Company",
+    "quote": "Their QA practice caught edge cases we had missed for months. Automated regression gave us confidence to ship faster after the engagement."
+  },
+  {
+    "id": "t10",
+    "name": "Divya Nair",
+    "designation": "Business Owner, Services Company",
+    "quote": "From discovery to deployment, the process felt structured. We always knew what was in progress, what was blocked, and what came next."
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "brandName": "ITX Networks",
+  "domain": "itxnetworks.com",
+  "domainComment": "Internal use only for SEO, sitemap, and career API — not shown in website content",
+  "industry": "IT / Software Development",
+  "targetCountry": "India",
+  "domainRegisteredDate": "2002-04-23",
+  "domainRegisteredComment": "Internal config only — do not display on the website",
+  "establishedYear": 2002,
+  "email": "info@itxnetworks.com",
+  "phone": null,
+  "phoneComment": "Phone number to be added later",
+  "addresses": [],
+  "addressesComment": "Office addresses to be added later",
+  "logoPath": null,
+  "logoComment": "Logo to be added at /public/images/logo.svg",
+  "social": {
+    "instagram": null,
+    "facebook": null
+  },
+  "socialComment": "Social media links to be added later",
+  "businessHours": "Monday to Friday, 9:30 AM to 6:30 PM IST",
+  "tagline": "Enterprise software development for modern businesses across India and beyond.",
+  "description": "ITX Networks delivers custom software, web applications, mobile apps, and enterprise solutions with a focus on quality engineering, scalable architecture, and long-term partnership."
+}

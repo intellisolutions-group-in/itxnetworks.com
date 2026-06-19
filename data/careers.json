@@ -1,0 +1,100 @@
+[
+  {
+    "id": "job-001",
+    "title": "Senior Full Stack Developer",
+    "department": "Engineering",
+    "location": "Remote",
+    "type": "Full-time",
+    "description": "Lead development of scalable web applications using modern JavaScript frameworks and cloud-native services.",
+    "requirements": [
+      "5+ years of experience in full stack development",
+      "Strong knowledge of React, Node.js, and REST APIs",
+      "Experience with database design and performance tuning",
+      "Comfortable working with distributed teams across India"
+    ]
+  },
+  {
+    "id": "job-002",
+    "title": "Mobile Application Developer",
+    "department": "Engineering",
+    "location": "Remote",
+    "type": "Full-time",
+    "description": "Build and maintain cross-platform and native mobile applications for enterprise and consumer use cases.",
+    "requirements": [
+      "3+ years of mobile development experience",
+      "Proficiency in React Native or Flutter",
+      "Understanding of app store deployment processes",
+      "Strong attention to UI performance and accessibility"
+    ]
+  },
+  {
+    "id": "job-003",
+    "title": "UI/UX Designer",
+    "department": "Design",
+    "location": "Remote",
+    "type": "Full-time",
+    "description": "Create intuitive interfaces, design systems, and user flows for web and mobile software products.",
+    "requirements": [
+      "4+ years of product design experience",
+      "Portfolio demonstrating B2B and enterprise work",
+      "Proficiency in Figma and prototyping tools",
+      "Ability to collaborate closely with engineering teams"
+    ]
+  },
+  {
+    "id": "job-004",
+    "title": "QA Engineer",
+    "department": "Quality Assurance",
+    "location": "Remote",
+    "type": "Full-time",
+    "description": "Design test plans, automate regression suites, and ensure release quality across multiple projects.",
+    "requirements": [
+      "3+ years in manual and automated testing",
+      "Experience with Playwright, Cypress, or Selenium",
+      "Strong understanding of SDLC and defect lifecycle",
+      "Detail-oriented with clear communication skills"
+    ]
+  },
+  {
+    "id": "job-005",
+    "title": "DevOps Engineer",
+    "department": "Infrastructure",
+    "location": "Remote",
+    "type": "Full-time",
+    "description": "Implement CI/CD pipelines, infrastructure as code, and observability for client delivery environments.",
+    "requirements": [
+      "4+ years of DevOps or platform engineering experience",
+      "Hands-on with Docker, Kubernetes, and cloud providers",
+      "Experience building secure deployment workflows",
+      "Familiarity with monitoring and incident response"
+    ]
+  },
+  {
+    "id": "job-006",
+    "title": "Business Analyst",
+    "department": "Delivery",
+    "location": "Remote",
+    "type": "Full-time",
+    "description": "Translate business requirements into actionable specifications and support agile delivery teams.",
+    "requirements": [
+      "3+ years as a business or systems analyst",
+      "Experience documenting functional and non-functional requirements",
+      "Strong stakeholder communication skills",
+      "Exposure to software development lifecycle in IT services"
+    ]
+  },
+  {
+    "id": "job-007",
+    "title": "Junior Software Developer",
+    "department": "Engineering",
+    "location": "Remote",
+    "type": "Full-time",
+    "description": "Support feature development, bug fixes, and code reviews under senior engineering mentorship.",
+    "requirements": [
+      "1–2 years of professional or internship experience",
+      "Solid fundamentals in programming and data structures",
+      "Familiarity with Git and collaborative development",
+      "Eagerness to learn modern web and cloud technologies"
+    ]
+  }
+]

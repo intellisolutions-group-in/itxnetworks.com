@@ -1,0 +1,74 @@
+[
+  {
+    "id": "p1",
+    "title": "Unified Operations Portal",
+    "type": "Enterprise Web Application",
+    "challenge": "A multi-branch services company relied on spreadsheets and disconnected tools to manage work orders, approvals, and reporting.",
+    "solution": "We designed a centralised web portal with role-based workflows, audit trails, and real-time dashboards tailored to operational teams.",
+    "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "AWS"],
+    "outcome": "Manual coordination time reduced significantly and leadership gained consistent visibility across regions."
+  },
+  {
+    "id": "p2",
+    "title": "Field Service Mobile Suite",
+    "type": "Cross-Platform Mobile App",
+    "challenge": "Technicians needed offline access to job details, checklists, and photo capture while working in low-connectivity areas.",
+    "solution": "A cross-platform mobile application with offline sync, GPS check-ins, and structured service reports integrated with the core ERP.",
+    "technologies": ["React Native", "GraphQL", "SQLite", "Firebase"],
+    "outcome": "Field teams completed jobs faster with fewer data entry errors and improved first-time resolution rates."
+  },
+  {
+    "id": "p3",
+    "title": "Inventory Intelligence Platform",
+    "type": "Custom Software",
+    "challenge": "A distribution business struggled with stock discrepancies, delayed replenishment, and limited forecasting visibility.",
+    "solution": "Custom inventory software with barcode scanning, automated reorder rules, and analytics for demand patterns by category.",
+    "technologies": [".NET", "SQL Server", "Power BI", "Azure"],
+    "outcome": "Stock accuracy improved and procurement cycles became more predictable across warehouses."
+  },
+  {
+    "id": "p4",
+    "title": "Customer Self-Service Hub",
+    "type": "Progressive Web App",
+    "challenge": "Support volume was high because customers could not track requests, invoices, or service history independently.",
+    "solution": "A progressive web app with secure login, ticket tracking, document downloads, and notification preferences.",
+    "technologies": ["Next.js", "Tailwind CSS", "REST APIs", "CloudFront"],
+    "outcome": "Support enquiries decreased while customer satisfaction scores improved after self-service launch."
+  },
+  {
+    "id": "p5",
+    "title": "Legacy ERP Modernisation",
+    "type": "Software Modernization",
+    "challenge": "An ageing desktop ERP could not scale, lacked API access, and blocked integration with newer SaaS tools.",
+    "solution": "Phased modernisation with a service-oriented architecture, cloud-hosted modules, and a migration plan for historical data.",
+    "technologies": ["Java", "Spring Boot", "PostgreSQL", "Kubernetes"],
+    "outcome": "Critical modules moved to the cloud with minimal disruption and a clear roadmap for remaining components."
+  },
+  {
+    "id": "p6",
+    "title": "B2B Ordering Platform",
+    "type": "E-commerce Development",
+    "challenge": "Wholesale buyers needed tiered pricing, bulk ordering, and approval flows not supported by a generic storefront.",
+    "solution": "A B2B commerce platform with account hierarchies, contract pricing, and integration to accounting and logistics systems.",
+    "technologies": ["Shopify Plus", "Node.js", "Stripe", "Webhooks"],
+    "outcome": "Order processing became faster and sales teams gained better insight into buyer behaviour and repeat patterns."
+  },
+  {
+    "id": "p7",
+    "title": "Compliance Document System",
+    "type": "Enterprise Application",
+    "challenge": "A regulated business required controlled document versioning, approvals, and traceability for audits.",
+    "solution": "An enterprise document management application with workflow automation, digital signatures, and granular permissions.",
+    "technologies": ["Angular", ".NET Core", "Azure Blob Storage", "Active Directory"],
+    "outcome": "Audit preparation time reduced and document retrieval became reliable across departments."
+  },
+  {
+    "id": "p8",
+    "title": "Analytics Integration Layer",
+    "type": "API Development",
+    "challenge": "Multiple product teams needed consistent access to customer and usage data without duplicating integration logic.",
+    "solution": "A central API layer with standardised endpoints, caching, rate limiting, and developer documentation.",
+    "technologies": ["FastAPI", "PostgreSQL", "Kafka", "OpenAPI"],
+    "outcome": "New integrations shipped faster and data inconsistencies across internal tools decreased materially."
+  }
+]

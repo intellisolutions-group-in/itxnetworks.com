@@ -1,0 +1,110 @@
+[
+  {
+    "slug": "choosing-technology-stack-enterprise-software",
+    "title": "How to Choose the Right Technology Stack for Enterprise Software",
+    "excerpt": "A practical framework for evaluating frameworks, languages, and platforms when building business-critical applications in India.",
+    "category": "Engineering",
+    "publishedDate": "2025-10-08",
+    "author": "ITX Networks Team",
+    "readTime": "6 min read",
+    "tags": ["Technology Stack", "Enterprise Software", "Architecture"],
+    "contentParagraphs": [
+      "Selecting a technology stack is one of the most consequential decisions in a software programme. The choice affects delivery speed, hiring, maintenance cost, security posture, and how comfortably the product can evolve over years. For Indian enterprises balancing growth with operational stability, the decision should be driven by business context—not popularity alone.",
+      "Start by mapping non-functional requirements: expected user load, compliance constraints, integration dependencies, offline needs, and internal team skills. A stack that works for a greenfield SaaS product may be inappropriate for a regulated workflow system tied to legacy ERP data.",
+      "Evaluate maintainability alongside initial velocity. Frameworks that accelerate early demos can become expensive if they limit testing, modularisation, or observability later. Prefer stacks with strong community support, clear upgrade paths, and tooling your team can operate in production.",
+      "Consider total cost of ownership, not only licence fees. Hosting, monitoring, CI/CD, security patching, and developer availability in your region all influence long-term viability. Document trade-offs explicitly so stakeholders understand why a recommendation was made.",
+      "Pilot risky areas before committing. Authentication flows, reporting performance, third-party integrations, and batch processing are common failure points. A short proof of concept reduces uncertainty and produces evidence for final stack selection.",
+      "The best stack is the one your organisation can deliver and support confidently. Align technology choices with product roadmap, team capability, and operational expectations—and revisit the decision as requirements mature."
+    ]
+  },
+  {
+    "slug": "agile-delivery-best-practices-b2b-software",
+    "title": "Agile Delivery Best Practices for B2B Software Teams",
+    "excerpt": "Structured agile habits that improve transparency, reduce rework, and keep enterprise stakeholders aligned throughout delivery.",
+    "category": "Delivery",
+    "publishedDate": "2025-10-22",
+    "author": "ITX Networks Team",
+    "readTime": "5 min read",
+    "tags": ["Agile", "Project Management", "B2B"],
+    "contentParagraphs": [
+      "Agile delivery succeeds when ceremonies produce clarity, not when teams simply move fast. B2B software projects often involve multiple departments, compliance checkpoints, and changing priorities. A disciplined agile model helps teams absorb change without losing control of scope or quality.",
+      "Maintain a visible backlog with prioritised items, acceptance criteria, and explicit dependencies. Stakeholders should understand what is in progress, what is blocked, and what will be demonstrated next. Transparency reduces last-minute surprises before release.",
+      "Run regular demos with real workflows, not slide decks. Business users validate behaviour early, and engineering teams receive actionable feedback while changes are still inexpensive. Record decisions so context is preserved when participants change.",
+      "Integrate quality practices into every sprint. Code review, automated regression, and staging validation should be standard—not a pre-release panic. Definition of done must include test evidence and documentation updates where relevant.",
+      "Track risks openly. Integration delays, data migration complexity, and third-party API instability should appear in sprint reports with mitigation plans. Escalation is easier when risks are documented early.",
+      "Agile is a delivery discipline, not a licence to skip planning. Combine iterative execution with clear milestones so leadership can forecast outcomes while teams retain flexibility within each sprint."
+    ]
+  },
+  {
+    "slug": "legacy-modernisation-without-business-disruption",
+    "title": "Legacy Modernisation Without Disrupting Daily Operations",
+    "excerpt": "Phased modernisation strategies that reduce risk while upgrading outdated systems critical to business continuity.",
+    "category": "Modernisation",
+    "publishedDate": "2025-11-05",
+    "author": "ITX Networks Team",
+    "readTime": "7 min read",
+    "tags": ["Legacy Systems", "Modernisation", "Risk Management"],
+    "contentParagraphs": [
+      "Legacy systems often run core operations—billing, inventory, approvals, or customer records—and cannot be switched off for a big-bang rewrite. Modernisation programmes must therefore balance progress with continuity, delivering value incrementally while protecting daily business activity.",
+      "Begin with an assessment that identifies critical modules, integration points, failure history, and technical debt hotspots. Prioritise components where risk, cost, or inability to integrate is highest. Not every module needs immediate replacement.",
+      "The strangler pattern is effective: expose legacy functionality through APIs, rebuild high-value modules incrementally, and route traffic gradually to new services. Parallel operation periods allow validation before decommissioning old components.",
+      "Data migration requires rehearsal. Test scripts against anonymised production samples, verify reconciliation reports, and define rollback procedures. Data errors discovered after cutover are far costlier than careful preparation.",
+      "Change management is as important as code. Train users on updated workflows, communicate downtime windows clearly, and provide hypercare support immediately after each phase goes live.",
+      "Modernisation is a multi-quarter journey. Success is measured by reduced incident rates, faster feature delivery, lower infrastructure cost, and improved user satisfaction—not by how quickly old code was deleted."
+    ]
+  },
+  {
+    "slug": "mobile-app-vs-pwa-vs-cross-platform",
+    "title": "Mobile App vs PWA vs Cross-Platform: A Decision Guide",
+    "excerpt": "Compare native, progressive web, and cross-platform approaches based on user needs, budget, and release timelines.",
+    "category": "Mobile",
+    "publishedDate": "2025-11-18",
+    "author": "ITX Networks Team",
+    "readTime": "6 min read",
+    "tags": ["Mobile Apps", "PWA", "Cross-Platform"],
+    "contentParagraphs": [
+      "Organisations frequently ask whether they should build a native mobile app, a progressive web app, or a cross-platform solution. Each option has distinct trade-offs in performance, distribution, offline capability, and long-term maintenance.",
+      "Native apps excel when deep device integration, high-performance graphics, or platform-specific UX is required. They also fit consumer products where app store presence and push notifications drive engagement. Development and maintenance costs are typically higher due to separate iOS and Android codebases.",
+      "Progressive web apps offer broad reach through the browser, faster distribution without app store delays, and lower initial cost for many B2B portals or internal tools. Offline support is achievable but must be designed deliberately—not assumed by default.",
+      "Cross-platform frameworks such as React Native or Flutter reduce duplication while targeting multiple platforms from a shared codebase. They suit products with moderate hardware requirements and teams seeking balanced speed and consistency.",
+      "Decision criteria should include user environment, connectivity patterns, security requirements, release cadence, and internal engineering skills. Field teams in low-connectivity regions may need offline-first mobile apps; corporate dashboards may be ideal PWAs.",
+      "There is no universal winner. Match the approach to product goals, validate assumptions with prototypes, and plan for post-launch monitoring before scaling investment."
+    ]
+  },
+  {
+    "slug": "software-testing-strategies-release-confidence",
+    "title": "Software Testing Strategies That Improve Release Confidence",
+    "excerpt": "Practical QA approaches combining manual exploration and automated regression for dependable production releases.",
+    "category": "Quality",
+    "publishedDate": "2025-12-02",
+    "author": "ITX Networks Team",
+    "readTime": "5 min read",
+    "tags": ["QA", "Automation", "Release Management"],
+    "contentParagraphs": [
+      "Testing should reflect business risk, not checkbox compliance. Critical flows—authentication, payments, data integrity, regulatory reporting—deserve deeper coverage than cosmetic UI variations that pose lower operational impact.",
+      "Build a test strategy early. Define environments, data requirements, entry and exit criteria, and ownership for manual versus automated suites. QA works best when integrated into sprint planning rather than appended at the end.",
+      "Automate regression for stable, high-value paths. Flaky tests erode trust in CI pipelines and should be treated as defects. Invest in maintainable frameworks, realistic test data, and clear failure diagnostics.",
+      "Manual exploratory testing remains essential for discovering edge cases automation misses—unusual user sequences, permission combinations, and integration failures under partial outages.",
+      "Performance and security testing should be scheduled before major launches, not after stakeholders announce release dates. Load profiles based on realistic usage reveal bottlenecks early.",
+      "Release readiness reports should summarise open risks explicitly. A go/no-go decision is a business choice supported by quality evidence—not a ceremonial approval after unresolved defects remain hidden."
+    ]
+  },
+  {
+    "slug": "cloud-migration-planning-growing-businesses",
+    "title": "Cloud Migration Planning for Growing Businesses in India",
+    "excerpt": "Steps to move applications to the cloud with controlled cost, security, and operational visibility.",
+    "category": "Cloud",
+    "publishedDate": "2025-12-16",
+    "author": "ITX Networks Team",
+    "readTime": "6 min read",
+    "tags": ["Cloud", "AWS", "Azure", "DevOps"],
+    "contentParagraphs": [
+      "Cloud migration offers scalability and managed services, but poorly planned moves can increase cost and complexity. Growing businesses in India should treat migration as a programme with clear phases, not a one-time lift-and-shift event.",
+      "Inventory applications, dependencies, data volumes, and compliance requirements before selecting target architecture. Some workloads suit containers, others serverless functions, and some remain better on managed VMs initially.",
+      "Design landing zones with security baselines: identity management, network segmentation, secrets handling, and audit logging. Cloud convenience should not weaken controls that existed in on-premise environments.",
+      "Migrate incrementally. Start with non-critical services, validate monitoring and backup procedures, then move core systems once operational playbooks are proven. Dual-running periods reduce rollback risk.",
+      "FinOps discipline matters from day one. Right-size instances, use autoscaling thoughtfully, and review storage lifecycle policies. Cloud bills grow quietly when unused resources accumulate.",
+      "Successful migration ends with a team that can operate the new environment confidently—documented runbooks, trained administrators, and observability dashboards that support incident response after go-live."
+    ]
+  }
+]
