@@ -10,7 +10,7 @@ export function SiteLogo({ size = "header", showTagline = false }: SiteLogoProps
   const logoHeight = size === "header" ? "h-8 md:h-10" : "h-8";
 
   return (
-    <Link href="/" className="flex items-center gap-3 group">
+    <Link href="/" className="flex items-center gap-3 group" aria-label={`${company.brandName} home`}>
       {/* Logo placeholder — replace with /images/logo.svg when available
       <Image
         src="/images/logo.svg"

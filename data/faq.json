@@ -4,7 +4,7 @@
     "items": [
       {
         "question": "What types of software projects does ITX Networks handle?",
-        "answer": "We deliver web applications, mobile apps, desktop software, enterprise systems, APIs, cloud-native platforms, and modernisation programmes for businesses across India and international markets."
+        "answer": "We deliver web applications, mobile apps, desktop software, enterprise systems, APIs, cloud-native platforms, and modernisation programmes for businesses across India."
       },
       {
         "question": "Which industries do you typically work with?",
@@ -46,7 +46,7 @@
     "items": [
       {
         "question": "Which technologies do you use?",
-        "answer": "Our stack includes React, Next.js, Node.js, .NET, Java, Python, React Native, Flutter, PostgreSQL, MongoDB, Redis, AWS, Azure, and GCP depending on project requirements."
+        "answer": "Our stack includes modern web frameworks, server runtimes, enterprise platforms, mobile SDKs, relational and document databases, caching layers, and public or private cloud services depending on project requirements."
       },
       {
         "question": "Do you provide cloud architecture and DevOps support?",

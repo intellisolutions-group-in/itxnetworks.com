@@ -43,14 +43,27 @@ export function TestimonialsSection() {
   const t = TESTIMONIALS[active];
 
   return (
-    <section id="testimonials" ref={ref} className="relative border-t border-[#1e1e1e] scroll-mt-[88px]">
+    <section
+      id="testimonials"
+      ref={ref}
+      className="relative border-t border-[#1e1e1e] scroll-mt-[88px]"
+      aria-labelledby="testimonials-heading"
+    >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div
           className={`border-b border-[#1e1e1e] py-8 flex items-end justify-between transition-all duration-500 ${
             vis ? "opacity-100" : "opacity-0"
           }`}
         >
-          <span className="sys-tag">TESTIMONIALS</span>
+          <div>
+            <span className="sys-tag">TESTIMONIALS</span>
+            <h2
+              id="testimonials-heading"
+              className="sr-only"
+            >
+              Client Testimonials
+            </h2>
+          </div>
           <div className="flex items-center gap-6">
             <Link
               href="/testimonials/"
@@ -75,11 +88,16 @@ export function TestimonialsSection() {
                 &ldquo;{t.quote}&rdquo;
               </p>
               <footer className="flex items-center gap-4">
-                <div className="w-10 h-10 border border-[#2e2e2e] flex items-center justify-center bg-[#0e0e0e]">
+                <div
+                  className="w-10 h-10 border border-[#2e2e2e] flex items-center justify-center bg-[#0e0e0e]"
+                  aria-hidden="true"
+                >
                   <span className="font-display text-lg text-[#2196f3]">{t.author.charAt(0)}</span>
                 </div>
                 <div>
-                  <p className="font-mono text-[11px] text-[#f2ede6] tracking-wider">{t.author}</p>
+                  <cite className="not-italic font-mono text-[11px] text-[#f2ede6] tracking-wider">
+                    {t.author}
+                  </cite>
                   <p className="font-mono text-[10px] text-[#3a3a3a] tracking-wider">{t.role}</p>
                 </div>
               </footer>

@@ -45,7 +45,7 @@ export function ContactForm({
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="border border-[#1e1e1e]">
+      <form onSubmit={handleSubmit} className="border border-[#1e1e1e]" aria-label="Contact inquiry form">
         <div className="grid md:grid-cols-2 border-b border-[#1e1e1e]">
           <Field label="FULL_NAME" name="name" error={errors.name} />
           <Field label="EMAIL" name="email" type="email" error={errors.email} />

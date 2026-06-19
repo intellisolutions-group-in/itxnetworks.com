@@ -2,12 +2,16 @@ import { AnimatedSection, Stagger } from "@/components/site/animated-section";
 import { PageLayout } from "@/components/site/page-layout";
 import { PageHero } from "@/components/site/page-hero";
 import { SiteCta } from "@/components/site/site-cta";
+import { PageSeo } from "@/components/site/page-seo";
 import { company } from "@/lib/company";
 import { createMetadata } from "@/lib/seo";
 
+const PAGE_TITLE = "Why Choose Us";
+const PAGE_DESCRIPTION = `Discover why organisations choose ${company.brandName} for software development—engineering discipline, transparent delivery, and long-term support.`;
+
 export const metadata = createMetadata({
-  title: "Why Choose Us",
-  description: `Discover why organisations choose ${company.brandName} for software development—engineering discipline, transparent delivery, and long-term support.`,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: ["why choose ITX Networks", "software development partner India"],
   path: "/why-choose-us/",
 });
@@ -21,7 +25,7 @@ const reasons = [
   {
     title: "India-Ready Delivery",
     description:
-      "Our teams understand local business contexts, compliance conversations, and collaboration across Indian and global stakeholders.",
+      "Our teams understand local business contexts, compliance conversations, and collaboration across Indian stakeholders.",
   },
   {
     title: "Transparent Communication",
@@ -48,6 +52,15 @@ const reasons = [
 export default function WhyChooseUsPage() {
   return (
     <PageLayout>
+      <PageSeo
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/why-choose-us/"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: PAGE_TITLE, path: "/why-choose-us/" },
+        ]}
+      />
       <PageHero
         tag="WHY_CHOOSE_US"
         title="A Partner Built For Serious Software Delivery"

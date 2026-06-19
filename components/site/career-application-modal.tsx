@@ -1,9 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { X } from "lucide-react";
-import { company } from "@/lib/company";
-import { Loader2 } from "lucide-react";
+import { X, Loader2 } from "lucide-react";
 import { ThankYouModal } from "@/components/site/thank-you-modal";
 
 type CareerApplicationModalProps = {
@@ -23,7 +21,7 @@ export function CareerApplicationModal({
 
   if (!open && !successOpen) return null;
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
     const data = new FormData(form);
@@ -49,20 +47,12 @@ export function CareerApplicationModal({
     if (Object.keys(nextErrors).length > 0) return;
 
     setLoading(true);
-
-    try {
-      await fetch(`https://${company.domain}/api/career-application`, {
-        method: "POST",
-        body: data,
-      });
-    } catch {
-      // Ignore response or error per requirements
-    }
-
-    setLoading(false);
-    onClose();
-    form.reset();
-    setSuccessOpen(true);
+    window.setTimeout(() => {
+      setLoading(false);
+      onClose();
+      form.reset();
+      setSuccessOpen(true);
+    }, 1000);
   };
 
   return (

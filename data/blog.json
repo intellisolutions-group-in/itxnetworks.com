@@ -66,7 +66,7 @@
       "Organisations frequently ask whether they should build a native mobile app, a progressive web app, or a cross-platform solution. Each option has distinct trade-offs in performance, distribution, offline capability, and long-term maintenance.",
       "Native apps excel when deep device integration, high-performance graphics, or platform-specific UX is required. They also fit consumer products where app store presence and push notifications drive engagement. Development and maintenance costs are typically higher due to separate iOS and Android codebases.",
       "Progressive web apps offer broad reach through the browser, faster distribution without app store delays, and lower initial cost for many B2B portals or internal tools. Offline support is achievable but must be designed deliberately—not assumed by default.",
-      "Cross-platform frameworks such as React Native or Flutter reduce duplication while targeting multiple platforms from a shared codebase. They suit products with moderate hardware requirements and teams seeking balanced speed and consistency.",
+      "Cross-platform frameworks reduce duplication while targeting multiple platforms from a shared codebase. They suit products with moderate hardware requirements and teams seeking balanced speed and consistency.",
       "Decision criteria should include user environment, connectivity patterns, security requirements, release cadence, and internal engineering skills. Field teams in low-connectivity regions may need offline-first mobile apps; corporate dashboards may be ideal PWAs.",
       "There is no universal winner. Match the approach to product goals, validate assumptions with prototypes, and plan for post-launch monitoring before scaling investment."
     ]
@@ -97,7 +97,7 @@
     "publishedDate": "2025-12-16",
     "author": "ITX Networks Team",
     "readTime": "6 min read",
-    "tags": ["Cloud", "AWS", "Azure", "DevOps"],
+    "tags": ["Cloud", "Migration", "DevOps"],
     "contentParagraphs": [
       "Cloud migration offers scalability and managed services, but poorly planned moves can increase cost and complexity. Growing businesses in India should treat migration as a programme with clear phases, not a one-time lift-and-shift event.",
       "Inventory applications, dependencies, data volumes, and compliance requirements before selecting target architecture. Some workloads suit containers, others serverless functions, and some remain better on managed VMs initially.",

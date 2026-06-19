@@ -5,6 +5,7 @@ export function ServiceCard({ service }: { service: Service }) {
   return (
     <Link
       href={`/services/${service.slug}/`}
+      aria-label={`Learn more about ${service.title}`}
       className="group border border-[#1e1e1e] row-hover block h-full"
     >
       <div className="border-b border-[#1e1e1e] p-5 flex items-center justify-between">

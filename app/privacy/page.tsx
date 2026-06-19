@@ -1,12 +1,16 @@
 import { AnimatedSection } from "@/components/site/animated-section";
 import { PageLayout } from "@/components/site/page-layout";
 import { PageHero } from "@/components/site/page-hero";
+import { PageSeo } from "@/components/site/page-seo";
 import { company } from "@/lib/company";
 import { createMetadata } from "@/lib/seo";
 
+const PAGE_TITLE = "Privacy Policy";
+const PAGE_DESCRIPTION = `Privacy policy for ${company.brandName} explaining how we collect, use, and protect information submitted through our website.`;
+
 export const metadata = createMetadata({
-  title: "Privacy Policy",
-  description: `Privacy policy for ${company.brandName} explaining how we collect, use, and protect information submitted through our website.`,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: ["privacy policy", "data protection"],
   path: "/privacy/",
 });
@@ -14,6 +18,15 @@ export const metadata = createMetadata({
 export default function PrivacyPage() {
   return (
     <PageLayout>
+      <PageSeo
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/privacy/"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: PAGE_TITLE, path: "/privacy/" },
+        ]}
+      />
       <PageHero
         tag="LEGAL"
         title="Privacy Policy"

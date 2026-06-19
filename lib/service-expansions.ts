@@ -3,7 +3,7 @@ export const serviceExpansions: Record<string, string[]> = {
     "For Indian enterprises, web platforms often need to support regional workflows, GST-related data capture, role hierarchies across branches, and integrations with accounting or logistics systems already in use. We map these requirements early so the application architecture accommodates them without costly rework later in the programme.",
     "Our delivery teams work closely with your stakeholders through structured sprint reviews, shared documentation, and environment access that mirrors production behaviour. This transparency helps business teams validate features while engineering teams maintain velocity and code quality throughout the build.",
     "Performance and reliability are validated using realistic test data, staging environments, and monitoring hooks before go-live. We also prepare rollback plans and deployment runbooks so your operations team can manage releases confidently after handover.",
-    "Whether you need a greenfield product or a phased replatforming of an existing site, ITX Networks provides a practical roadmap aligned to budget, internal capacity, and business priorities across India and international markets.",
+    "Whether you need a greenfield product or a phased replatforming of an existing site, ITX Networks provides a practical roadmap aligned to budget, internal capacity, and business priorities across India.",
   ],
   "mobile-app-development": [
     "Mobile projects for Indian businesses frequently require offline capability, low-bandwidth tolerance, and interfaces that work well across a wide range of Android devices. We design and test with these constraints in mind rather than assuming always-on connectivity or flagship hardware.",
@@ -39,7 +39,7 @@ export const serviceExpansions: Record<string, string[]> = {
     "Enterprise programmes require alignment between business stakeholders, IT governance, and delivery teams. We invest time upfront in non-functional requirements, integration mapping, and rollout planning so production deployment is controlled and auditable.",
     "Batch processing, workflow automation, and reporting pipelines are designed with observability in mind. Operations teams receive dashboards, alerts, and runbooks that support day-to-day management after go-live.",
     "Data migration, user training, and hypercare support are planned as explicit workstreams rather than afterthoughts. This reduces disruption when critical systems transition to new software.",
-    "ITX Networks delivers enterprise applications with the rigour Indian and global organisations expect from a dependable software partner.",
+    "ITX Networks delivers enterprise applications with the rigour Indian organisations expect from a dependable software partner.",
   ],
   "desktop-applications": [
     "Desktop software remains essential for workflows involving large datasets, hardware peripherals, or power-user interfaces that web browsers cannot support efficiently. We evaluate platform coverage and deployment models before implementation begins.",

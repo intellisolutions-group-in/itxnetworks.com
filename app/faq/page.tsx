@@ -4,12 +4,16 @@ import { PageLayout } from "@/components/site/page-layout";
 import { PageHero } from "@/components/site/page-hero";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 import { SiteCta } from "@/components/site/site-cta";
+import { PageSeo } from "@/components/site/page-seo";
 import { company } from "@/lib/company";
-import { createMetadata } from "@/lib/seo";
+import { createMetadata, faqPageSchema, flattenFaqItems } from "@/lib/seo";
+
+const PAGE_TITLE = "FAQ";
+const PAGE_DESCRIPTION = `Frequently asked questions about ${company.brandName} services, process, technology stack, and engagement models.`;
 
 export const metadata = createMetadata({
-  title: "FAQ",
-  description: `Frequently asked questions about ${company.brandName} services, process, technology stack, and engagement models.`,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: ["software development FAQ", "IT services questions"],
   path: "/faq/",
 });
@@ -17,6 +21,16 @@ export const metadata = createMetadata({
 export default function FaqPage() {
   return (
     <PageLayout>
+      <PageSeo
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/faq/"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: PAGE_TITLE, path: "/faq/" },
+        ]}
+        schemas={[faqPageSchema(flattenFaqItems(faqData))]}
+      />
       <PageHero
         tag="FAQ"
         title="Frequently Asked Questions"

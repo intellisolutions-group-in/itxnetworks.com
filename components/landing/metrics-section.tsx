@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { siteMetrics } from "@/lib/site-metrics";
 
 function AnimCounter({
   end,
@@ -67,24 +68,24 @@ const STATUS_COLOR: Record<number, string> = {
 
 const METRICS = [
   {
-    display: "2002",
+    display: String(siteMetrics.establishedYear),
     label: "ESTABLISHED",
     sub: "long-term software delivery partner",
   },
   {
-    end: 18,
+    end: siteMetrics.domainAgeYears,
+    suffix: "+",
+    label: "YEARS ACTIVE",
+    sub: `software delivery since ${siteMetrics.establishedYear}`,
+  },
+  {
+    end: siteMetrics.serviceAreaCount,
     suffix: "",
     label: "SERVICE AREAS",
     sub: "web, mobile, cloud, enterprise",
   },
   {
-    end: 8,
-    suffix: "",
-    label: "CASE STUDIES",
-    sub: "representative project examples",
-  },
-  {
-    end: 18,
+    end: siteMetrics.faqCount,
     suffix: "+",
     label: "FAQ ANSWERS",
     sub: "common client questions covered",
@@ -121,7 +122,12 @@ export function MetricsSection() {
   }, []);
 
   return (
-    <section id="metrics" ref={ref} className="relative border-t border-[#1e1e1e] scroll-mt-[88px]">
+    <section
+      id="metrics"
+      ref={ref}
+      className="relative border-t border-[#1e1e1e] scroll-mt-[88px]"
+      aria-labelledby="metrics-heading"
+    >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div
           className={`border-b border-[#1e1e1e] py-8 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 transition-all duration-500 ${
@@ -130,7 +136,10 @@ export function MetricsSection() {
         >
           <div>
             <span className="sys-tag mb-3 block">COMPANY METRICS</span>
-            <h2 className="font-display text-6xl lg:text-8xl leading-[0.88] tracking-tight text-[#f2ede6]">
+            <h2
+              id="metrics-heading"
+              className="font-display text-6xl lg:text-8xl leading-[0.88] tracking-tight text-[#f2ede6]"
+            >
               DELIVERY YOU
               <br />
               <span style={{ WebkitTextStroke: "1px #3a3a3a", color: "transparent" }}>

@@ -4,13 +4,14 @@ import { AnimatedSection, Stagger } from "@/components/site/animated-section";
 import { PageLayout } from "@/components/site/page-layout";
 import { PageHero } from "@/components/site/page-hero";
 import { SiteCta } from "@/components/site/site-cta";
+import { PageSeo } from "@/components/site/page-seo";
 import {
   blogPosts,
   formatBlogDate,
   getBlogPostBySlug,
   getRelatedPosts,
 } from "@/lib/blog";
-import { createMetadata, articleSchema } from "@/lib/seo";
+import { articleSchema, createMetadata } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -30,6 +31,7 @@ export async function generateMetadata({ params }: Props) {
     description: post.excerpt,
     keywords: [...post.tags, post.category, "software blog"],
     path: `/blog/${post.slug}/`,
+    type: "article",
   });
 }
 
@@ -49,10 +51,18 @@ export default async function BlogDetailPage({ params }: Props) {
 
   return (
     <PageLayout>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      <PageSeo
+        title={post.title}
+        description={post.excerpt}
+        path={`/blog/${post.slug}/`}
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog/" },
+          { name: post.title, path: `/blog/${post.slug}/` },
+        ]}
+        schemas={[schema]}
       />
+      <article>
       <PageHero tag={post.category.toUpperCase()} title={post.title} description={post.excerpt}>
         <div className="flex flex-wrap items-center gap-4 mt-2">
           <span className="font-mono text-[11px] text-[#3a3a3a] tracking-widest">
@@ -130,6 +140,7 @@ export default async function BlogDetailPage({ params }: Props) {
         title="Ready To Start Your Next Project?"
         description="Share your software goals and we will help you plan the right delivery approach."
       />
+      </article>
     </PageLayout>
   );
 }

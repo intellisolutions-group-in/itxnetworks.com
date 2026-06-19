@@ -2,12 +2,16 @@ import { AnimatedSection, Stagger } from "@/components/site/animated-section";
 import { PageLayout } from "@/components/site/page-layout";
 import { PageHero } from "@/components/site/page-hero";
 import { SiteCta } from "@/components/site/site-cta";
+import { PageSeo } from "@/components/site/page-seo";
 import { company } from "@/lib/company";
 import { createMetadata } from "@/lib/seo";
 
+const PAGE_TITLE = "Our Development Process";
+const PAGE_DESCRIPTION = `Learn about ${company.brandName}'s software development process—from discovery and architecture to build, launch, and support.`;
+
 export const metadata = createMetadata({
-  title: "Our Development Process",
-  description: `Learn about ${company.brandName}'s software development process—from discovery and architecture to build, launch, and support.`,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: ["software development process", "agile delivery", "SDLC"],
   path: "/our-process/",
 });
@@ -54,6 +58,15 @@ const steps = [
 export default function OurProcessPage() {
   return (
     <PageLayout>
+      <PageSeo
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/our-process/"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: PAGE_TITLE, path: "/our-process/" },
+        ]}
+      />
       <PageHero
         tag="OUR_PROCESS"
         title="A Structured Path From Idea To Production"

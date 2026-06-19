@@ -73,7 +73,12 @@ export function HowItWorksSection() {
   const step = STEPS[active];
 
   return (
-    <section id="our-process" ref={ref} className="relative border-t border-[#1e1e1e] bg-[#080808] scroll-mt-[88px]">
+    <section
+      id="our-process"
+      ref={ref}
+      className="relative border-t border-[#1e1e1e] bg-[#080808] scroll-mt-[88px]"
+      aria-labelledby="process-heading"
+    >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div
           className={`border-b border-[#1e1e1e] py-8 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 transition-all duration-500 ${
@@ -82,7 +87,10 @@ export function HowItWorksSection() {
         >
           <div>
             <span className="sys-tag mb-3 block">OUR PROCESS</span>
-            <h2 className="font-display text-6xl lg:text-8xl leading-[0.88] tracking-tight text-[#f2ede6]">
+            <h2
+              id="process-heading"
+              className="font-display text-6xl lg:text-8xl leading-[0.88] tracking-tight text-[#f2ede6]"
+            >
               FROM IDEA<br />
               <span style={{ WebkitTextStroke: "1px #3a3a3a", color: "transparent" }}>
                 TO PRODUCTION

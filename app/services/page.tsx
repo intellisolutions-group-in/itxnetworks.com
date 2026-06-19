@@ -3,13 +3,17 @@ import { PageLayout } from "@/components/site/page-layout";
 import { PageHero } from "@/components/site/page-hero";
 import { ServiceCard } from "@/components/site/service-card";
 import { SiteCta } from "@/components/site/site-cta";
+import { PageSeo } from "@/components/site/page-seo";
 import { company } from "@/lib/company";
-import { createMetadata } from "@/lib/seo";
+import { buildPageUrl, createMetadata, itemListSchema } from "@/lib/seo";
 import { services } from "@/lib/services";
 
+const PAGE_TITLE = "Services";
+const PAGE_DESCRIPTION = `Explore software development services from ${company.brandName} including web, mobile, cloud, enterprise, and custom solutions.`;
+
 export const metadata = createMetadata({
-  title: "Services",
-  description: `Explore software development services from ${company.brandName} including web, mobile, cloud, enterprise, and custom solutions.`,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: ["software development services", "web development", "mobile apps", "IT services India"],
   path: "/services/",
 });
@@ -19,6 +23,25 @@ const categories = [...new Set(services.map((service) => service.category))];
 export default function ServicesPage() {
   return (
     <PageLayout>
+      <PageSeo
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/services/"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: PAGE_TITLE, path: "/services/" },
+        ]}
+        schemas={[
+          itemListSchema(
+            "Software Development Services",
+            services.map((service) => ({
+              name: service.title,
+              url: buildPageUrl(`/services/${service.slug}/`),
+              description: service.shortDescription,
+            }))
+          ),
+        ]}
+      />
       <PageHero
         tag="SERVICES"
         title="End-to-End Software Development Services"

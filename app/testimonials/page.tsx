@@ -3,12 +3,16 @@ import { AnimatedSection, Stagger } from "@/components/site/animated-section";
 import { PageLayout } from "@/components/site/page-layout";
 import { PageHero } from "@/components/site/page-hero";
 import { SiteCta } from "@/components/site/site-cta";
+import { PageSeo } from "@/components/site/page-seo";
 import { company } from "@/lib/company";
 import { createMetadata } from "@/lib/seo";
 
+const PAGE_TITLE = "Testimonials";
+const PAGE_DESCRIPTION = `Read client testimonials about working with ${company.brandName} on software development and IT delivery engagements.`;
+
 export const metadata = createMetadata({
-  title: "Testimonials",
-  description: `Read client testimonials about working with ${company.brandName} on software development and IT delivery engagements.`,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: ["client testimonials", "software development reviews"],
   path: "/testimonials/",
 });
@@ -16,6 +20,15 @@ export const metadata = createMetadata({
 export default function TestimonialsPage() {
   return (
     <PageLayout>
+      <PageSeo
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/testimonials/"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: PAGE_TITLE, path: "/testimonials/" },
+        ]}
+      />
       <PageHero
         tag="TESTIMONIALS"
         title="What Clients Say About Our Delivery"

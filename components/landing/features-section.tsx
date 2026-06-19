@@ -38,6 +38,7 @@ function FeatureRow({ f, index }: { f: (typeof FEATURED)[0]; index: number }) {
     >
       <Link
         href={`/services/${f.slug}/`}
+        aria-label={`View ${f.title.replace(/\n/g, " ")} service details`}
         className="group block border-b border-[#1e1e1e] row-hover"
       >
       <div className="grid grid-cols-[56px_1fr] lg:grid-cols-[56px_260px_1fr_160px] gap-0">
@@ -80,7 +81,11 @@ export function FeaturesSection() {
   }, []);
 
   return (
-    <section id="services-preview" className="relative border-t border-[#1e1e1e] scroll-mt-[88px]">
+    <section
+      id="services-preview"
+      className="relative border-t border-[#1e1e1e] scroll-mt-[88px]"
+      aria-labelledby="services-preview-heading"
+    >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div
           ref={ref}
@@ -92,7 +97,10 @@ export function FeaturesSection() {
           <div className="col-span-2 lg:col-span-3 p-6 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
             <div>
               <span className="sys-tag mb-4 block">SERVICES</span>
-              <h2 className="font-display text-6xl lg:text-8xl text-[#f2ede6] leading-[0.88] tracking-tight">
+              <h2
+                id="services-preview-heading"
+                className="font-display text-6xl lg:text-8xl text-[#f2ede6] leading-[0.88] tracking-tight"
+              >
                 SOFTWARE<br />
                 <span
                   className="text-[#3a3a3a]"
