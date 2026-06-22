@@ -4,7 +4,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { SiteCta } from "@/components/site/site-cta";
 import { PageSeo } from "@/components/site/page-seo";
 import { company } from "@/lib/company";
-import { createMetadata } from "@/lib/seo";
+import { createMetadata, processStepsSchema } from "@/lib/seo";
 
 const PAGE_TITLE = "Our Development Process";
 const PAGE_DESCRIPTION = `Learn about ${company.brandName}'s software development process—from discovery and architecture to build, launch, and support.`;
@@ -65,6 +65,12 @@ export default function OurProcessPage() {
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: PAGE_TITLE, path: "/our-process/" },
+        ]}
+        schemas={[
+          processStepsSchema(
+            steps.map((step) => ({ title: step.title, description: step.description })),
+            PAGE_TITLE
+          ),
         ]}
       />
       <PageHero

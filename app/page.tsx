@@ -17,7 +17,8 @@ import { CtaSection } from "@/components/landing/cta-section";
 import { FooterSection } from "@/components/landing/footer-section";
 import { JsonLd } from "@/components/site/json-ld";
 import { company } from "@/lib/company";
-import { createMetadata, webPageSchema } from "@/lib/seo";
+import { createMetadata, faqPageSchema, flattenFaqItems, webPageSchema } from "@/lib/seo";
+import faqData from "@/data/faq.json";
 
 export const metadata = createMetadata({
   title: "IT & Software Development Company in India",
@@ -33,15 +34,20 @@ export const metadata = createMetadata({
   path: "/",
 });
 
+const homeFaqItems = flattenFaqItems(faqData).slice(0, 5);
+
 export default function Home() {
   return (
     <>
       <JsonLd
-        data={webPageSchema(
-          `${company.brandName} — IT & Software Development Company in India`,
-          company.description,
-          "/"
-        )}
+        data={[
+          webPageSchema(
+            `${company.brandName} — IT & Software Development Company in India`,
+            company.description,
+            "/"
+          ),
+          faqPageSchema(homeFaqItems),
+        ]}
       />
       <Navigation />
       <main id="main-content" className="relative min-h-screen overflow-x-hidden bg-[#050505]">

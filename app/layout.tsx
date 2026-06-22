@@ -34,6 +34,13 @@ export const metadata: Metadata = {
     template: `%s | ${company.brandName}`,
   },
   description: company.description,
+  applicationName: company.brandName,
+  authors: [{ name: company.brandName, url: buildPageUrl() }],
+  creator: company.brandName,
+  publisher: company.brandName,
+  formatDetection: {
+    telephone: false,
+  },
   keywords: [
     company.brandName,
     "software development company India",
@@ -55,8 +62,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: DEFAULT_OG_IMAGE,
-        width: 512,
-        height: 512,
+        width: 3334,
+        height: 834,
         alt: `${company.brandName} — Software Development in India`,
       },
     ],
@@ -70,10 +77,21 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   icons: {
-    icon: "/icon.svg",
-    apple: "/icon.svg",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/favicon-32x32.png",
   },
 };
 
@@ -91,6 +109,9 @@ export default function RootLayout({
       <body
         className={`${barlow.variable} ${barlowCondensed.variable} ${ibmPlexMono.variable} font-sans antialiased`}
       >
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         {children}
       </body>

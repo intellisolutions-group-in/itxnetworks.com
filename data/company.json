@@ -12,8 +12,7 @@
   "phoneComment": "Phone number to be added later",
   "addresses": [],
   "addressesComment": "Office addresses to be added later",
-  "logoPath": null,
-  "logoComment": "Logo to be added at /public/images/logo.svg",
+  "logoPath": "/images/logo.png",
   "social": {
     "instagram": null,
     "facebook": null

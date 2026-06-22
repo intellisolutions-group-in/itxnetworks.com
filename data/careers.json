@@ -3,7 +3,7 @@
     "id": "job-001",
     "title": "Senior Full Stack Developer",
     "department": "Engineering",
-    "location": "Remote",
+    "location": "Hybrid",
     "type": "Full-time",
     "description": "Lead development of scalable web applications using modern JavaScript frameworks and cloud-native services.",
     "requirements": [
@@ -17,7 +17,7 @@
     "id": "job-002",
     "title": "Mobile Application Developer",
     "department": "Engineering",
-    "location": "Remote",
+    "location": "Remote (India)",
     "type": "Full-time",
     "description": "Build and maintain cross-platform and native mobile applications for enterprise and consumer use cases.",
     "requirements": [
@@ -31,7 +31,7 @@
     "id": "job-003",
     "title": "UI/UX Designer",
     "department": "Design",
-    "location": "Remote",
+    "location": "Hybrid",
     "type": "Full-time",
     "description": "Create intuitive interfaces, design systems, and user flows for web and mobile software products.",
     "requirements": [
@@ -45,7 +45,7 @@
     "id": "job-004",
     "title": "QA Engineer",
     "department": "Quality Assurance",
-    "location": "Remote",
+    "location": "Remote (India)",
     "type": "Full-time",
     "description": "Design test plans, automate regression suites, and ensure release quality across multiple projects.",
     "requirements": [
@@ -59,7 +59,7 @@
     "id": "job-005",
     "title": "DevOps Engineer",
     "department": "Infrastructure",
-    "location": "Remote",
+    "location": "Hybrid",
     "type": "Full-time",
     "description": "Implement CI/CD pipelines, infrastructure as code, and observability for client delivery environments.",
     "requirements": [
@@ -73,7 +73,7 @@
     "id": "job-006",
     "title": "Business Analyst",
     "department": "Delivery",
-    "location": "Remote",
+    "location": "Remote (India)",
     "type": "Full-time",
     "description": "Translate business requirements into actionable specifications and support agile delivery teams.",
     "requirements": [
@@ -87,7 +87,7 @@
     "id": "job-007",
     "title": "Junior Software Developer",
     "department": "Engineering",
-    "location": "Remote",
+    "location": "Remote (India)",
     "type": "Full-time",
     "description": "Support feature development, bug fixes, and code reviews under senior engineering mentorship.",
     "requirements": [
