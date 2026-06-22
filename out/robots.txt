@@ -1,4 +1,5 @@
 User-Agent: *
 Allow: /
 
+Host: https://itxnetworks.com
 Sitemap: https://itxnetworks.com/sitemap.xml

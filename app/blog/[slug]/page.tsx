@@ -32,6 +32,8 @@ export async function generateMetadata({ params }: Props) {
     keywords: [...post.tags, post.category, "software blog"],
     path: `/blog/${post.slug}/`,
     type: "article",
+    publishedTime: post.publishedDate,
+    authors: [post.author],
   });
 }
 

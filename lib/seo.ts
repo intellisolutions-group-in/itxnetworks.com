@@ -7,6 +7,30 @@ type PageMeta = {
   keywords?: string[];
   path?: string;
   type?: "website" | "article";
+  publishedTime?: string;
+  modifiedTime?: string;
+  authors?: string[];
+};
+
+type CareerJob = {
+  title: string;
+  description: string;
+  type: string;
+  requirements: string[];
+};
+
+type PortfolioItem = {
+  title: string;
+  type: string;
+  challenge: string;
+  solution: string;
+  outcome: string;
+};
+
+type TestimonialItem = {
+  name: string;
+  designation: string;
+  quote: string;
 };
 
 type BreadcrumbItem = {
@@ -19,8 +43,7 @@ type FaqItem = {
   answer: string;
 };
 
-/** Default share image — site icon until a dedicated OG asset is added. */
-export const DEFAULT_OG_IMAGE = `${siteUrl}/icon.svg`;
+export const DEFAULT_OG_IMAGE = `${siteUrl}/images/logo.png`;
 
 export function buildPageUrl(path = ""): string {
   if (!path || path === "/") return `${siteUrl}/`;
@@ -28,26 +51,44 @@ export function buildPageUrl(path = ""): string {
   return normalized.endsWith("/") ? `${siteUrl}${normalized}` : `${siteUrl}${normalized}/`;
 }
 
-function buildSharedMetadata(fullTitle: string, description: string, url: string, type: "website" | "article") {
-  return {
+function buildSharedMetadata(
+  fullTitle: string,
+  description: string,
+  url: string,
+  type: "website" | "article",
+  articleMeta?: Pick<PageMeta, "publishedTime" | "modifiedTime" | "authors">
+) {
+  const openGraph: Metadata["openGraph"] = {
     title: fullTitle,
     description,
-    openGraph: {
-      title: fullTitle,
-      description,
-      url,
-      siteName: company.brandName,
-      locale: "en_IN",
-      type,
-      images: [
-        {
-          url: DEFAULT_OG_IMAGE,
-          width: 512,
-          height: 512,
-          alt: `${company.brandName} — Software Development in India`,
-        },
-      ],
+    url,
+    siteName: company.brandName,
+    locale: "en_IN",
+    type,
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 3334,
+        height: 834,
+        alt: `${company.brandName} — Software Development in India`,
+      },
+    ],
+  };
+
+  if (type === "article" && articleMeta?.publishedTime) {
+    openGraph.publishedTime = articleMeta.publishedTime;
+    openGraph.modifiedTime = articleMeta.modifiedTime ?? articleMeta.publishedTime;
+    if (articleMeta.authors?.length) {
+      openGraph.authors = articleMeta.authors;
+    }
+  }
+
+  return {
+    title: {
+      absolute: fullTitle,
     },
+    description,
+    openGraph,
     twitter: {
       card: "summary_large_image" as const,
       title: fullTitle,
@@ -77,6 +118,9 @@ export function createMetadata({
   keywords = [],
   path = "",
   type = "website",
+  publishedTime,
+  modifiedTime,
+  authors,
 }: PageMeta): Metadata {
   const url = buildPageUrl(path);
   const fullTitle =
@@ -84,10 +128,20 @@ export function createMetadata({
       ? `${company.brandName} — ${title}`
       : `${title} | ${company.brandName}`;
 
-  return {
-    ...buildSharedMetadata(fullTitle, description, url, type),
+  const metadata: Metadata = {
+    ...buildSharedMetadata(fullTitle, description, url, type, {
+      publishedTime,
+      modifiedTime,
+      authors,
+    }),
     keywords: [company.brandName, "software development", "IT services India", ...keywords],
   };
+
+  if (type === "article" && authors?.length) {
+    metadata.authors = authors.map((name) => ({ name }));
+  }
+
+  return metadata;
 }
 
 export function organizationSchema() {
@@ -96,12 +150,23 @@ export function organizationSchema() {
     "@type": "Organization",
     name: company.brandName,
     url: siteUrl,
+    logo: {
+      "@type": "ImageObject",
+      url: DEFAULT_OG_IMAGE,
+    },
     email: company.email,
     foundingDate: String(company.establishedYear),
     description: company.description,
     areaServed: {
       "@type": "Country",
       name: company.targetCountry,
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: company.email,
+      availableLanguage: ["English"],
+      areaServed: company.targetCountry,
     },
   };
 }
@@ -225,6 +290,10 @@ export function articleSchema(
       "@type": "Organization",
       name: company.brandName,
       url: siteUrl,
+      logo: {
+        "@type": "ImageObject",
+        url: DEFAULT_OG_IMAGE,
+      },
     },
     datePublished: publishedDate,
     dateModified: publishedDate,
@@ -239,4 +308,129 @@ export function flattenFaqItems(
   sections: { category: string; items: FaqItem[] }[]
 ): FaqItem[] {
   return sections.flatMap((section) => section.items);
+}
+
+export function contactPageSchema(title: string, description: string, path: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: title,
+    description,
+    url: buildPageUrl(path),
+    inLanguage: "en-IN",
+    mainEntity: {
+      "@type": "Organization",
+      name: company.brandName,
+      url: siteUrl,
+      email: company.email,
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: company.email,
+        availableLanguage: "English",
+      },
+    },
+  };
+}
+
+const EMPLOYMENT_TYPE_MAP: Record<string, string> = {
+  "Full-time": "FULL_TIME",
+  "Part-time": "PART_TIME",
+  Contract: "CONTRACTOR",
+};
+
+function defaultValidThrough(): string {
+  const date = new Date();
+  date.setMonth(date.getMonth() + 3);
+  return date.toISOString().split("T")[0];
+}
+
+export function jobPostingSchema(job: CareerJob) {
+  const description = [job.description, ...job.requirements.map((req) => `• ${req}`)].join("\n");
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: job.title,
+    description,
+    datePosted: new Date().toISOString().split("T")[0],
+    validThrough: defaultValidThrough(),
+    employmentType: EMPLOYMENT_TYPE_MAP[job.type] ?? "FULL_TIME",
+    hiringOrganization: {
+      "@type": "Organization",
+      name: company.brandName,
+      sameAs: siteUrl,
+      logo: DEFAULT_OG_IMAGE,
+    },
+    jobLocationType: "TELECOMMUTE",
+    applicantLocationRequirements: {
+      "@type": "Country",
+      name: company.targetCountry,
+    },
+    industry: company.industry,
+  };
+}
+
+export function jobPostingsSchema(jobs: CareerJob[]) {
+  return jobs.map((job) => jobPostingSchema(job));
+}
+
+export function testimonialReviewsSchema(items: TestimonialItem[]) {
+  return items.map((item) => ({
+    "@context": "https://schema.org",
+    "@type": "Review",
+    reviewBody: item.quote,
+    author: {
+      "@type": "Person",
+      name: item.name,
+      jobTitle: item.designation,
+    },
+    itemReviewed: {
+      "@type": "Organization",
+      name: company.brandName,
+      url: siteUrl,
+    },
+  }));
+}
+
+export function portfolioItemListSchema(items: PortfolioItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Software Development Portfolio",
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "CreativeWork",
+        name: item.title,
+        genre: item.type,
+        description: `${item.challenge} ${item.solution} ${item.outcome}`.trim(),
+        creator: {
+          "@type": "Organization",
+          name: company.brandName,
+          url: siteUrl,
+        },
+      },
+    })),
+  };
+}
+
+export function processStepsSchema(
+  steps: { title: string; description: string }[],
+  name = "Software Development Process"
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description: `Structured software development process used by ${company.brandName}.`,
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.title,
+      text: step.description,
+    })),
+  };
 }

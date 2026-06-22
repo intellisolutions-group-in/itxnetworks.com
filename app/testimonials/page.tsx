@@ -5,7 +5,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { SiteCta } from "@/components/site/site-cta";
 import { PageSeo } from "@/components/site/page-seo";
 import { company } from "@/lib/company";
-import { createMetadata } from "@/lib/seo";
+import { createMetadata, testimonialReviewsSchema } from "@/lib/seo";
 
 const PAGE_TITLE = "Testimonials";
 const PAGE_DESCRIPTION = `Read client testimonials about working with ${company.brandName} on software development and IT delivery engagements.`;
@@ -28,6 +28,7 @@ export default function TestimonialsPage() {
           { name: "Home", path: "/" },
           { name: PAGE_TITLE, path: "/testimonials/" },
         ]}
+        schemas={testimonialReviewsSchema(testimonialsData)}
       />
       <PageHero
         tag="TESTIMONIALS"

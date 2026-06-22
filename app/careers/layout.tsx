@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
+import careersData from "@/data/careers.json";
 import { PageSeo } from "@/components/site/page-seo";
-import { createMetadata } from "@/lib/seo";
+import { createMetadata, jobPostingsSchema } from "@/lib/seo";
 import { company } from "@/lib/company";
 
 const PAGE_TITLE = "Careers";
@@ -24,6 +25,7 @@ export default function CareersLayout({ children }: { children: ReactNode }) {
           { name: "Home", path: "/" },
           { name: PAGE_TITLE, path: "/careers/" },
         ]}
+        schemas={jobPostingsSchema(careersData)}
       />
       {children}
     </>

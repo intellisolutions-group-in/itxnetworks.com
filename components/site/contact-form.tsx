@@ -47,12 +47,12 @@ export function ContactForm({
     <>
       <form onSubmit={handleSubmit} className="border border-[#1e1e1e]" aria-label="Contact inquiry form">
         <div className="grid md:grid-cols-2 border-b border-[#1e1e1e]">
-          <Field label="FULL_NAME" name="name" error={errors.name} />
-          <Field label="EMAIL" name="email" type="email" error={errors.email} />
+          <Field label="FULL_NAME" name="name" error={errors.name} autoComplete="name" />
+          <Field label="EMAIL" name="email" type="email" error={errors.email} autoComplete="email" />
         </div>
         {showSubject && (
           <div className="border-b border-[#1e1e1e]">
-            <Field label="SUBJECT" name="subject" error={errors.subject} />
+            <Field label="SUBJECT" name="subject" error={errors.subject} autoComplete="off" />
           </div>
         )}
         <div className="border-b border-[#1e1e1e]">
@@ -107,11 +107,13 @@ function Field({
   name,
   type = "text",
   error,
+  autoComplete,
 }: {
   label: string;
   name: string;
   type?: string;
   error?: string;
+  autoComplete?: string;
 }) {
   return (
     <label className="block border-b md:border-b-0 md:border-r border-[#1e1e1e] last:border-r-0">
@@ -121,6 +123,7 @@ function Field({
       <input
         name={name}
         type={type}
+        autoComplete={autoComplete}
         className="w-full bg-transparent px-5 pb-5 pt-3 text-sm text-[#f2ede6] outline-none"
       />
       {error && (

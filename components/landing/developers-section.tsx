@@ -19,11 +19,10 @@ npm install validation library form library
   },
   {
     label: "BUILD",
-    code: `// Feature module — typed API layer
+    code: `// Feature module — typed data layer
 export async function getOrders(userId: string) {
-  const res = await fetch(\`/api/orders?user=\${userId}\`)
-  if (!res.ok) throw new Error('Request failed')
-  return res.json()
+  // Static mock — illustrative delivery pipeline sample
+  return [{ id: "ord-001", userId, status: "fulfilled" }]
 }
 
 // Component consumes typed data

@@ -4,12 +4,12 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const DELIVERY_HUBS = [
-  { city: "Mumbai", region: "IN-WEST", projects: "Web & ERP", latency: "Remote", load: 78 },
-  { city: "Bengaluru", region: "IN-SOUTH", projects: "Mobile & Cloud", latency: "Remote", load: 85 },
-  { city: "Hyderabad", region: "IN-SOUTH", projects: "Enterprise Apps", latency: "Remote", load: 72 },
-  { city: "Pune", region: "IN-WEST", projects: "Custom Software", latency: "Remote", load: 68 },
-  { city: "Delhi NCR", region: "IN-NORTH", projects: "Integrations", latency: "Remote", load: 74 },
-  { city: "Pan-India", region: "REMOTE", projects: "Distributed Teams", latency: "Async", load: 91 },
+  { city: "Mumbai", region: "IN-WEST", projects: "Web & ERP", latency: "Remote" },
+  { city: "Bengaluru", region: "IN-SOUTH", projects: "Mobile & Cloud", latency: "Remote" },
+  { city: "Hyderabad", region: "IN-SOUTH", projects: "Enterprise Apps", latency: "Remote" },
+  { city: "Pune", region: "IN-WEST", projects: "Custom Software", latency: "Remote" },
+  { city: "Delhi NCR", region: "IN-NORTH", projects: "Integrations", latency: "Remote" },
+  { city: "Pan-India", region: "REMOTE", projects: "Distributed Teams", latency: "Async" },
 ];
 
 export function InfrastructureSection() {
@@ -73,8 +73,8 @@ export function InfrastructureSection() {
         </div>
 
         <div className="border-b border-[#1e1e1e]">
-          <div className="grid grid-cols-[1fr_100px_120px_80px_120px] border-b border-[#1e1e1e] px-6 py-3">
-            {["LOCATION", "REGION", "FOCUS", "MODE", "CAPACITY"].map((h) => (
+          <div className="grid grid-cols-[1fr_100px_120px_80px] border-b border-[#1e1e1e] px-6 py-3">
+            {["LOCATION", "REGION", "FOCUS", "MODE"].map((h) => (
               <span key={h} className="font-mono text-[9px] text-[#3a3a3a] tracking-widest">
                 {h}
               </span>
@@ -84,7 +84,7 @@ export function InfrastructureSection() {
           {DELIVERY_HUBS.map((r, i) => (
             <div
               key={r.city}
-              className={`grid grid-cols-[1fr_100px_120px_80px_120px] px-6 py-5 border-b border-[#1e1e1e] last:border-b-0 transition-all duration-300 ${
+              className={`grid grid-cols-[1fr_100px_120px_80px] px-6 py-5 border-b border-[#1e1e1e] last:border-b-0 transition-all duration-300 ${
                 active === i ? "bg-[#0e0e0e]" : "hover:bg-[#0a0a0a]"
               } ${vis ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
               style={{ transitionDelay: `${i * 60}ms` }}
@@ -106,15 +106,6 @@ export function InfrastructureSection() {
                 {r.projects}
               </span>
               <span className="font-mono text-sm text-[#5a5a5a] self-center">{r.latency}</span>
-              <div className="flex items-center gap-2 self-center">
-                <div className="flex-1 h-1 bg-[#1e1e1e]">
-                  <div
-                    className="h-full bg-[#2196f3] transition-all duration-500"
-                    style={{ width: `${r.load}%`, opacity: active === i ? 1 : 0.4 }}
-                  />
-                </div>
-                <span className="font-mono text-[10px] text-[#3a3a3a] w-7 text-right">{r.load}%</span>
-              </div>
             </div>
           ))}
         </div>

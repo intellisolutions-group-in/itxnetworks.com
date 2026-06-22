@@ -5,7 +5,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { SiteCta } from "@/components/site/site-cta";
 import { PageSeo } from "@/components/site/page-seo";
 import { company } from "@/lib/company";
-import { createMetadata } from "@/lib/seo";
+import { createMetadata, portfolioItemListSchema } from "@/lib/seo";
 
 const PAGE_TITLE = "Portfolio";
 const PAGE_DESCRIPTION = `View case studies and project examples delivered by ${company.brandName} across web, mobile, enterprise, and integration programmes.`;
@@ -28,6 +28,7 @@ export default function PortfolioPage() {
           { name: "Home", path: "/" },
           { name: PAGE_TITLE, path: "/portfolio/" },
         ]}
+        schemas={[portfolioItemListSchema(portfolioData)]}
       />
       <PageHero
         tag="PORTFOLIO"

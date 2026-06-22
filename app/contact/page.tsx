@@ -4,7 +4,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { ContactForm } from "@/components/site/contact-form";
 import { PageSeo } from "@/components/site/page-seo";
 import { company } from "@/lib/company";
-import { createMetadata } from "@/lib/seo";
+import { createMetadata, contactPageSchema } from "@/lib/seo";
 
 const PAGE_TITLE = "Contact Us";
 const PAGE_DESCRIPTION = `Contact ${company.brandName} for software development enquiries, project discussions, and partnership opportunities.`;
@@ -27,6 +27,7 @@ export default function ContactPage() {
           { name: "Home", path: "/" },
           { name: PAGE_TITLE, path: "/contact/" },
         ]}
+        schemas={[contactPageSchema(PAGE_TITLE, PAGE_DESCRIPTION, "/contact/")]}
       />
       <PageHero
         tag="CONTACT"
