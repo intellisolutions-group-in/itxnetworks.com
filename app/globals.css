@@ -274,3 +274,13 @@
 .skip-link:focus {
   left: 1rem;
 }
+
+/* ── CONTRAST & ACCESSIBILITY OVERRIDES ───────────────── */
+/* Overrides arbitrary Tailwind classes to improve visibility against the #050505 background */
+.text-\[\#5a5a5a\] {
+  color: #ffffff !important; /* White color for maximum readability */
+}
+
+.text-\[\#3a3a3a\] {
+  color: #ffffff !important; /* White color for maximum readability */
+}
