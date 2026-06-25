@@ -107,7 +107,7 @@ export function FooterSection() {
 
         <div className="py-5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-mono text-[10px] text-[#3a3a3a]">
-            © {new Date().getFullYear()} {company.brandName.toUpperCase()}. ALL RIGHTS RESERVED.
+            Copyright © {company.establishedYear}- {new Date().getFullYear()} {company.brandName.toUpperCase()}. ALL RIGHTS RESERVED.
           </p>
           <div className="flex items-center gap-6">
             <span className="font-mono text-[10px] text-[#3a3a3a] tabular-nums">{time} IST</span>

@@ -116,9 +116,6 @@ export default function PrivacyPage() {
                 </a>
                 .
               </p>
-              <p className="mt-3 font-mono text-[11px] text-[#3a3a3a]">
-                Last updated: June 2026
-              </p>
             </div>
           </div>
         </div>
