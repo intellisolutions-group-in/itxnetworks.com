@@ -139,23 +139,6 @@ export default async function ServiceDetailPage({ params }: Props) {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="border-b border-[#1e1e1e]" delay={200}>
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-16 lg:py-20">
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <span className="sys-tag">SERVICE_INQUIRY</span>
-              <h2 className="font-display text-4xl text-[#f2ede6] mt-4 uppercase">
-                Discuss {service.title}
-              </h2>
-              <p className="mt-4 text-sm text-[#5a5a5a] leading-relaxed">
-                Share your requirements and our team will respond with next steps for scoping and
-                delivery planning.
-              </p>
-            </div>
-            <ContactForm submitLabel="SEND_INQUIRY" />
-          </div>
-        </div>
-      </AnimatedSection>
 
       {related.length > 0 && (
         <AnimatedSection className="border-b border-[#1e1e1e]" delay={250}>

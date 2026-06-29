@@ -64,7 +64,6 @@ export default function Home() {
         <PortfolioPreviewSection />
         <TestimonialsSection />
         <FaqPreviewSection />
-        <InquirySection />
         <CtaSection />
       </main>
       <FooterSection />

@@ -50,16 +50,7 @@ export default function ServicesPage() {
 
       <AnimatedSection className="border-b border-[#1e1e1e]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-16 lg:py-20">
-          <span className="sys-tag">SERVICE_CATEGORIES</span>
-          <div className="mt-6 flex flex-wrap gap-3">
-            {categories.map((category, index) => (
-              <Stagger key={category} index={index}>
-                <span className="font-mono text-[10px] tracking-widest border border-[#1e1e1e] px-4 py-2 text-[#5a5a5a]">
-                  {category.toUpperCase()}
-                </span>
-              </Stagger>
-            ))}
-          </div>
+
           <div className="mt-12 grid md:grid-cols-2 xl:grid-cols-3 gap-0 border border-[#1e1e1e]">
             {services.map((service, index) => (
               <Stagger key={service.slug} index={index}>

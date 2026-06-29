@@ -87,7 +87,7 @@ export default function ContactPage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="border-b border-[#1e1e1e] bg-[#080808]" delay={100}>
+      {/* <AnimatedSection className="border-b border-[#1e1e1e] bg-[#080808]" delay={100}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-16 lg:py-20">
           <span className="sys-tag">LOCATION</span>
           <h2 className="font-display text-4xl text-[#f2ede6] mt-4 uppercase">
@@ -103,7 +103,7 @@ export default function ContactPage() {
             </span>
           </div>
         </div>
-      </AnimatedSection>
+      </AnimatedSection> */}
     </PageLayout>
   );
 }
