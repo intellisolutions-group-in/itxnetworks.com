@@ -183,7 +183,7 @@ export function DevelopersSection() {
               </button>
             </div>
 
-            <div className="flex-1 bg-[#050505] p-6 font-mono text-[12px] min-h-[300px]">
+            <div className="flex-1 bg-[#050505] p-6 font-mono text-[12px] min-h-[300px] overflow-x-auto">
               <pre>
                 {TABS[tab].code.split("\n").map((line, li) => (
                   <div

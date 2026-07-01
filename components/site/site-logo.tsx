@@ -11,7 +11,7 @@ type SiteLogoProps = {
 };
 
 export function SiteLogo({ size = "header", showTagline = false }: SiteLogoProps) {
-  const logoHeight = size === "header" ? "h-8 md:h-10" : "h-8";
+  const logoHeight = size === "header" ? "h-8 md:h-auto" : "h-8";
   const logoSrc = company.logoPath ?? "/images/logo.png";
 
   return (

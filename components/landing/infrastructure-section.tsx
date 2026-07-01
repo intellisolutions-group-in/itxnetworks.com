@@ -72,42 +72,44 @@ export function InfrastructureSection() {
           </div>
         </div>
 
-        <div className="border-b border-[#1e1e1e]">
-          <div className="grid grid-cols-[1fr_100px_120px_80px] border-b border-[#1e1e1e] px-6 py-3">
-            {["LOCATION", "REGION", "FOCUS", "MODE"].map((h) => (
-              <span key={h} className="font-mono text-[9px] text-[#3a3a3a] tracking-widest">
-                {h}
-              </span>
+        <div className="border-b border-[#1e1e1e] overflow-x-auto">
+          <div className="min-w-[600px]">
+            <div className="grid grid-cols-[1fr_100px_120px_80px] border-b border-[#1e1e1e] px-6 py-3">
+              {["LOCATION", "REGION", "FOCUS", "MODE"].map((h) => (
+                <span key={h} className="font-mono text-[9px] text-[#3a3a3a] tracking-widest">
+                  {h}
+                </span>
+              ))}
+            </div>
+
+            {DELIVERY_HUBS.map((r, i) => (
+              <div
+                key={r.city}
+                className={`grid grid-cols-[1fr_100px_120px_80px] px-6 py-5 border-b border-[#1e1e1e] last:border-b-0 transition-all duration-300 ${
+                  active === i ? "bg-[#0e0e0e]" : "hover:bg-[#0a0a0a]"
+                } ${vis ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+                style={{ transitionDelay: `${i * 60}ms` }}
+              >
+                <div className="flex items-center gap-3">
+                  <span
+                    className={`w-1.5 h-1.5 rounded-full transition-colors shrink-0 ${
+                      active === i ? "bg-[#2196f3]" : "bg-[#2e2e2e]"
+                    }`}
+                  />
+                  <span className={`font-mono text-sm ${active === i ? "text-[#f2ede6]" : "text-[#5a5a5a]"}`}>
+                    {r.city}
+                  </span>
+                </div>
+                <span className="font-mono text-[10px] text-[#3a3a3a] tracking-wider self-center">
+                  {r.region}
+                </span>
+                <span className={`font-mono text-[10px] self-center ${active === i ? "text-[#2196f3]" : "text-[#5a5a5a]"}`}>
+                  {r.projects}
+                </span>
+                <span className="font-mono text-sm text-[#5a5a5a] self-center">{r.latency}</span>
+              </div>
             ))}
           </div>
-
-          {DELIVERY_HUBS.map((r, i) => (
-            <div
-              key={r.city}
-              className={`grid grid-cols-[1fr_100px_120px_80px] px-6 py-5 border-b border-[#1e1e1e] last:border-b-0 transition-all duration-300 ${
-                active === i ? "bg-[#0e0e0e]" : "hover:bg-[#0a0a0a]"
-              } ${vis ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-              style={{ transitionDelay: `${i * 60}ms` }}
-            >
-              <div className="flex items-center gap-3">
-                <span
-                  className={`w-1.5 h-1.5 rounded-full transition-colors shrink-0 ${
-                    active === i ? "bg-[#2196f3]" : "bg-[#2e2e2e]"
-                  }`}
-                />
-                <span className={`font-mono text-sm ${active === i ? "text-[#f2ede6]" : "text-[#5a5a5a]"}`}>
-                  {r.city}
-                </span>
-              </div>
-              <span className="font-mono text-[10px] text-[#3a3a3a] tracking-wider self-center">
-                {r.region}
-              </span>
-              <span className={`font-mono text-[10px] self-center ${active === i ? "text-[#2196f3]" : "text-[#5a5a5a]"}`}>
-                {r.projects}
-              </span>
-              <span className="font-mono text-sm text-[#5a5a5a] self-center">{r.latency}</span>
-            </div>
-          ))}
         </div>
 
         <div className="py-4 flex justify-end">

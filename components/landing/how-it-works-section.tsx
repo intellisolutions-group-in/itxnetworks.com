@@ -81,9 +81,8 @@ export function HowItWorksSection() {
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div
-          className={`border-b border-[#1e1e1e] py-8 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 transition-all duration-500 ${
-            vis ? "opacity-100" : "opacity-0"
-          }`}
+          className={`border-b border-[#1e1e1e] py-8 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 transition-all duration-500 ${vis ? "opacity-100" : "opacity-0"
+            }`}
         >
           <div>
             <span className="sys-tag mb-3 block">OUR PROCESS</span>
@@ -109,18 +108,16 @@ export function HowItWorksSection() {
                 key={s.id}
                 type="button"
                 onClick={() => setActive(i)}
-                className={`w-full text-left border-b border-[#1e1e1e] p-6 transition-all duration-200 group ${
-                  active === i ? "bg-[#0e0e0e]" : "hover:bg-[#0a0a0a]"
-                }`}
+                className={`w-full text-left border-b border-[#1e1e1e] p-6 transition-all duration-200 group ${active === i ? "bg-[#0e0e0e]" : "hover:bg-[#0a0a0a]"
+                  }`}
               >
                 <div className="flex items-center justify-between mb-3">
                   <span className="font-mono text-[9px] text-[#3a3a3a] tracking-widest">{s.tag}</span>
                   <span className="font-mono text-[10px] text-[#3a3a3a]">{s.id}</span>
                 </div>
                 <h3
-                  className={`font-display text-2xl leading-[0.9] transition-colors whitespace-pre-line ${
-                    active === i ? "text-[#2196f3]" : "text-[#3a3a3a] group-hover:text-[#5a5a5a]"
-                  }`}
+                  className={`font-display text-2xl leading-[0.9] transition-colors whitespace-pre-line ${active === i ? "text-[#2196f3]" : "text-[#3a3a3a] group-hover:text-[#5a5a5a]"
+                    }`}
                 >
                   {s.title}
                 </h3>
@@ -161,7 +158,7 @@ export function HowItWorksSection() {
                   <span className="font-mono text-[10px] text-[#22c55e]">READY</span>
                 </div>
               </div>
-              <div className="p-6 font-mono text-[12px] min-h-[260px]">
+              <div className="p-6 font-mono text-[12px] min-h-[260px] overflow-x-auto">
                 <pre>
                   {step.code.split("\n").map((line, li) => (
                     <div
